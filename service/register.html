@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)/register.html -->
+<html lang="zh-CN" class="js cssanimations"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>帮站网</title>
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<link rel="alternate icon" type="image/png" href="">
+<link rel="stylesheet" href="./register/amazeui.min.css">
+<link rel="stylesheet" type="text/css" href="./register/style.css">
+<link rel="stylesheet" type="text/css" href="./register/image-picker.css" media="all">
+<link rel="stylesheet" type="text/css" href="./register/header.css" media="all">
+<link rel="stylesheet" type="text/css" href="./register/login.css" media="all">
+<script src="./register/push.js"></script><script src="./register/hm.js"></script><script src="./register/jquery-1.7.2.min.js"></script>
+
+<script src="./register/amazeui.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="./register/highcharts.js"></script>
+<script type="text/javascript" src="./register/image-picker.min.js"></script>
+<script type="text/javascript" src="./register/jquery.ThinkBox.js"></script>
+<link rel="stylesheet" type="text/css" href="./register/ThinkBox.css" media="all">
+<!--<![endif]-->
+<link rel="stylesheet" type="text/css" href="./register/index-02.css">
+<style>
+        .footer p {
+            color: #7f8c8d;
+            margin: 0;
+            padding: 15px 0;
+            text-align: center;
+            background: #2d3e50;
+        }
+
+        li input {
+            width: 100px;
+        }
+
+        .table-align-center td {
+            text-align: center;
+        }
+
+        .table-align-center th {
+            text-align: center;
+        }
+
+        #catchWebSort{
+            color: red;
+        }
+    </style>
+<script>
+    var ueditor_url = "/home/ueditor/index.html";
+    </script>
+<script src="./register/fundebug.0.3.6.min.js" apikey="9ca9151bee93ed78c168265f1cad030dca4f7b204e1c877f85458f0aa355d17a"></script>
+</head>
+<body class="" style="">
+<header class="am-topbar am-topbar-inverse">
+<div class="header-login">
+<div class="am-container">
+<div class="header-login-left"></div>
+<div class="am-topbar-right" style="margin-right: 43px;">
+<a href="/register.html"><span class="am-icon-pencil"></span> 注册</a>
+</div>
+<div class="am-topbar-right" style="margin-right: 50px;">
+<a href="/login.html"><span class="am-icon-user"></span> 登录</a>
+</div>
+</div>
+</div>
+<div class="header-nav">
+<div class="am-container">
+<div class="header-nav-left">
+<div class="header-nav-left am-topbar-left">
+<a href="/" alt="帮站网"><img src="./register/logo.png" alt=""></a>
+</div>
+<div class="am-topbar-left logo-wz"><a href="/" alt="帮站网"><img src="./register/logo1.png" alt=""></a></div>
+<div class="header-nav-right am-topbar-right">
+<ul class="am-nav am-nav-pills am-topbar-nav header-nav-ul">
+<li><a href="/">首页</a></li>
+ <li><a href="/bbs/">问答</a></li>
+<li>
+<a href="/tool.html">工具</a></li>
+<li>
+<a href="/guide/">指南</a>
+</li>
+<li><a href="/share.html">赚积分</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</header>
+<style>
+    .b-b {
+        border-bottom: 1px solid #dee5e7
+    }
+
+    .p-t-sm {
+        padding-top: 10px
+    }
+
+    .p-b-sm {
+        padding-bottom: 10px
+    }
+
+    .icon {
+        background-image: url("/static/img/site_ico.png");
+        display: inline-block
+    }
+
+    .user{
+        height: 550px;
+    }
+    .user .icon {
+        width: 35px;
+        height: 35px
+    }
+
+    .user .icon-users {
+        background-position: 0 -150px
+    }
+
+    .user .icon-user {
+        background-position: -35px -150px
+    }
+
+    .user .user-title {
+        font-size: 22px;
+        color: #444
+    }
+
+    .user .user-title * {
+        vertical-align: text-bottom
+    }
+
+    .user .title {
+        font-size: 22px;
+        color: #444;
+        padding-bottom: 16px;
+        border-bottom: solid 1px #fff;
+    }
+
+    .user .title * {
+        vertical-align: text-bottom
+    }
+
+    .user .title .en {
+        font-size: 16px
+    }
+
+    .user .service {
+        background: #efefef;
+        padding:10px 20px;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .user .service .trait {
+        text-align: center;
+        margin: 40px 5px 30px 5px;
+        color: #666;
+    }
+
+    .user .service .trait .icon {
+        width: 40px;
+        height: 40px
+    }
+
+    .user .service .trait .icon-vip {
+        background-position: 0 -185px
+    }
+
+    .user .service .trait .icon-mouse {
+        background-position: -40px -185px
+    }
+
+    .user .service .trait .icon-shield {
+        background-position: -80px -185px
+    }
+
+    .user .service .trait .icon-aim {
+        background-position: -120px -185px
+    }
+
+    .user .service ul li {
+        color: #666;
+        line-height: 200%
+    }
+</style>
+<div class="am-g am-g-fixed am-margin-vertical-lg am-g-collapse am-container login">
+<div class="am-u-sm-7 register-leftimg user">
+<div class="service">
+<div class="title">
+<span class="icon icon-users"></span><span class="m-l">会员权益</span>
+</div>
+<div class="row trait">
+<div class="am-u-sm-3"><span class="icon icon-vip"></span>
+<div>会员特权</div>
+</div>
+<div class="am-u-sm-3"><span class="icon icon-mouse"></span>
+<div>操作简单</div>
+</div>
+<div class="am-u-sm-3"><span class="icon icon-aim"></span>
+<div>控制精准</div>
+</div>
+<div class="am-u-sm-3"><span class="icon icon-shield"></span>
+<div>安全可靠</div>
+</div>
+<div style="clear: both"></div>
+</div>
+<ul class="m-b-lg">
+<li style="color: red;">全面支持PC端流量</li>
+<li style="color: red;">全面支持移动端(手机，平板)流量</li>
+<li class="p-b-sm b-b" style="color: red;border-color: #9E9E9E;width: 300px;">全面支持手机App流量</li>
+<li class="p-t-sm">无需挂机，单任务8万IP/日流量
+</li><li>24小时流量曲线任性设置</li><li>流量地区任性设置</li>
+<li>访客停留时间，IP/PV比例任性设置</li><li>来源网址，点击网址，弹窗比例统统任性设置</li>
+</ul> </div>
+</div>
+<div class="am-u-sm-5 login-rightform">
+<div class="am-form" id="UserProfile" data-am-validator="" novalidate="novalidate">
+<h6 class="login-formtext">欢迎加入</h6>
+<fieldset>
+<div class="am-form-group am-form-icon am-form-error">
+<i class="am-icon-user"></i>
+<input type="email" class="am-form-field am-field-error am-active" id="inputEmail" placeholder="请输入您常用的E-Mail地址" required="" pattern="^((([a-zA-Z]|\d|[!#\$%&amp;&#39;\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-zA-Z]|\d|[!#\$%&amp;&#39;\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-zA-Z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-zA-Z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-zA-Z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-zA-Z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-zA-Z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-zA-Z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$">
+</div>
+<div class="am-form-group am-form-icon am-form-error">
+<i class="am-icon-user"></i>
+<input type="text" class="am-form-field am-field-error am-active" minlength="2" maxlength="10" id="inputUserName" placeholder="请输入您得用户名" required="">
+</div>
+<div class="am-form-group am-form-icon am-form-error">
+<i class="am-icon-unlock-alt"></i>
+<input type="password" class="am-form-field am-field-error am-active" id="inputPassword" minlength="6" maxlength="16" placeholder="请输入登录密码" required="">
+</div>
+<div class="am-form-group am-form-icon am-form-error">
+<i class="am-icon-unlock-alt"></i>
+<input type="password" class="am-form-field am-field-error am-active" id="inputRePassword" data-equal-to="#inputPassword" placeholder="请再次输入登录密码" required="" pattern="^$">
+</div>
+<div class="am-form-group am-form-icon" style="display:none">
+<i class="am-icon-unlock-alt"></i>
+<input type="text" class="am-form-field" id="inputInvite" placeholder="请输入邀请码" value="W6VS3IE" required="">
+</div>
+<div class="am-g am-form-group am-form-icon am-form-error">
+<div class="am-u-sm-6">
+<i class="am-icon-link"></i>
+<input type="text" minlength="4" class="am-form-field am-field-error am-active" id="inputVerify" required="" placeholder="请输入右侧验证码" style="width: 120px;">
+</div>
+<div class="am-u-sm-6 verify">
+<img src="./register/captcha.html" alt="captcha"> </div>
+</div>
+<div class="am-g am-form-group">
+<div class="am-u-sm-offset-2 am-u-sm-10">
+<div class="checkbox">
+<label>
+
+<script>
+    $(function () {
+        $('#xieyi-confirm').modal({
+            onCancel: function (e) {
+                location.href = '/';
+            }
+        });
+    })
+    $(document).keypress(function (e) {
+        if (e.which == 13) {
+            $('#submit').click();
+        }
+    });
+    $('#submit').click(function () {
+        var Check = $('#UserProfile').data('amui.validator').isFormValid();
+        if (Check == false) {
+            $.ThinkBox.error('请正确填写相应字段');
+            $('#sumbit').button('reset');
+            return false;
+        }
+
+        var data = {
+            email: $('#inputEmail').val(),
+            password: $('#inputPassword').val(),
+            repassword: $('#inputRePassword').val(),
+            invite: $('#inputInvite').val(),
+            code: $('#inputVerify').val(),
+            username: $('#inputUserName').val()
+        };
+        $.ajax({
+            url: "/Home/Login/handle.html?action=register",
+            type: 'post',
+            data: data,
+            dataType: 'json',
+            success: function (data) {
+                if (data.code == 1) {
+                    $.ThinkBox.success(data.msg);
+                    setTimeout(function () {
+                        location.href = "/login.html";
+                    }, 2000); //加载成功后关闭loading信息
+                } else {
+                    if (data.msg) {
+                        $.ThinkBox.error(data.msg);
+                    }
+                    refreshCaptcha();
+                    $('#submit').button('reset');
+                }
+            },
+            error: function () {
+                $.ThinkBox.error('网络故障,稍后重试');
+                refreshCaptcha();
+            }
+        });
+    });
+    $('.verify').click(function () {
+        refreshCaptcha();
+    });
+
+    function refreshCaptcha() {
+        $('.verify').children('img').attr('src', "/captcha.html?" + Math.random());
+    }
+</script>
+
+<script>
+    $(function () {
+        var $form = $('#form-with-tooltip');
+        var $tooltip = $('<div id="vld-tooltip">提示信息！</div>');
+        $tooltip.appendTo(document.body);
+
+        $form.validator();
+
+        var validator = $form.data('amui.validator');
+
+        $form.on('focusin focusout', '.am-form-error input', function (e) {
+            if (e.type === 'focusin') {
+                var $this = $(this);
+                var offset = $this.offset();
+                var msg = $this.data('foolishMsg') || validator.getValidationMessage($this.data('validity'));
+
+                $tooltip.text(msg).show().css({
+                    left: offset.left + 10,
+                    top: offset.top + $(this).outerHeight() + 10
+                });
+            } else {
+                $tooltip.hide();
+            }
+        });
+
+        var screenHeight = document.body.scrollHeight;
+        var bodyHeight = document.body.clientHeight;
+
+        if (bodyHeight < screenHeight) {
+            $('body').css('height', bodyHeight);
+            $('footer').addClass('am-topbar-fixed-bottom');
+        }
+    });
+
+
+
+<div class="am-dimmer" data-am-dimmer="" style="display: none;"></div><div id="vld-tooltip">提示信息！</div></body></html>
