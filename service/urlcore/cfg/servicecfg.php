@@ -1,0 +1,11 @@
+<?php 
+define('CFG_OPTIMIZE',150); 
+define('CFG_IP8',120); 
+define('CFG_IP101',160); 
+define('CFG_IP103',261); 
+define('CFG_IP106',520); 
+define('CFG_IP108',780); 
+define('CFG_IP110',980); 
+define('CFG_IP115',1500); 
+define('CFG_IP120',2000); 
+?>

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>测试支付的通知接口能否正常运行</title>
+<link rel="stylesheet" type="text/css" href="./resources/css/ext-all.css" />
+<script type="text/javascript" src="./adapter/ext/ext-base-debug.js"></script>
+<script type="text/javascript" src="./ext-all-debug.js"></script>
+<script type="text/javascript">
+	Ext.onReady(function(){
+			Ext.Ajax.request({
+					url:"../service/urlcore/alipay/notify_url.php",
+					method:"POST",
+					params:{
+						trade_no:"208811058",
+						out_trade_no:"20101207100016258",
+						total_fee:1000,
+						buyer_email:"lanrain@qq.com",
+						trade_status:"TRADE_FINISHED",
+						subject:"测试支付宝通知接口::订单名称",
+						body:"测试支付宝通知接口::订单描述",
+					},
+					success:function(res,opt){
+						document.write(res.responseText);
+					},
+					failure:function(res,opt){
+						document.write(res.responseText);
+					}
+				});
+		});
+</script>
+</head>
+<body>
+
+</body>
+</html>

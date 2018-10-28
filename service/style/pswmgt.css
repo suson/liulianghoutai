@@ -1,0 +1,39 @@
+*
+{
+    margin:0px;
+	padding:0px;
+    font-size:12px;
+    color:#777777;
+}
+body
+{
+    height:100%;
+}
+table
+{
+    border:0px;
+    border-collapse:collapse;
+    table-layout:fixed;
+    text-align:left;
+}
+td
+{
+	text-overflow:ellipsis;
+	overflow:hidden;
+	white-space:nowrap;
+	word-break:break-all;
+}
+img
+{
+    border:0px;
+}
+.btnsubmit
+{
+    background: url("../images/submit_bg.gif") repeat-x;
+    text-align:center;
+    height:25px;
+    padding-top:3px;
+    border-width:1px;
+    border-color:#3399FF;
+    color:#000000;
+}

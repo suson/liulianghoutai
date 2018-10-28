@@ -1,0 +1,8 @@
+body {FONT-SIZE: 12px; margin: 0; padding: 0; overflow:hidden;}
+img {BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px}
+.news {PADDING-TOP:1px;CLEAR: both; BACKGROUND: url(../images/news_bg.gif); WIDTH: 598px; ColOR: #356EB4; HEIGHT: 24px}
+.news ul {PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: hidden; liNE-HEIGHT: 24px; PADDING-TOP: 0px; liST-STYLE-TYPE: none; HEIGHT: 24px}
+.news ul li {MARGIN: 0px 0px 0px 1em; text-align:left;}
+.news ul li.active {DISPLAY: block}
+.news ul A {ColOR: #356EB4; TEXT-DECORATION: none}
+.news ul A:hover {TEXT-DECORATION: underline}

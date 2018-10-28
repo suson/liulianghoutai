@@ -1,0 +1,10 @@
+(function($){$("#goon").live("click",function(){$("#ie-alert-overlay").hide();$("#ie-alert-panel").hide();});function initialize($obj,support,title,text){var panel="<span>"+title+"</span>"
++"<p> "+text+"</p>"
++"<div class='browser'>"
++"<ul>"
++"<li><a class='chrome' href='https://www.google.com/chrome/' target='_blank'></a></li>"
++"<li><a class='firefox' href='http://chrome.360.cn/' target='_blank'></a></li>"
++"<li><a class='ie9' href='http://se.360.cn/' target='_blank'></a></li>"
++"<li><a class='safari' href='http://www.liebao.cn/download.html' target='_blank'></a></li>"
++"<ul>"
++"</div>";var overlay=$("<div id='ie-alert-overlay'></div>");var iepanel=$("<div id='ie-alert-panel'>"+panel+"</div>");var docHeight=$(document).height();overlay.css("height",docHeight+"px");$obj.prepend(iepanel);$obj.prepend(overlay);};$.fn.iealert=function(options){var defaults={support:"ie11",title:"\u4F60\u77E5\u9053\u4F60\u7684Internet Explorer\u662F\u8FC7\u65F6\u4E86\u5417?",text:"\u4e3a\u4e86\u5f97\u5230\u6211\u4eec\u7f51\u7ad9\u6700\u597d\u7684\u4f53\u9a8c\u6548\u679c\uff0c\u6211\u4eec\u5f3a\u70c8\u5efa\u8bae\u60a8\u5347\u7ea7\u5230\u6700\u65b0\u7248\u672c\u7684chrome\u5185\u6838\u6d4f\u89c8\u5668\u3002Internet Explore\u6d4f\u89c8\u5668\u4e0d\u80fd\u4f7f\u7528\u6211\u4eec\u63d0\u4f9b\u7684SEO\u4f18\u5316\u63d2\u4ef6,\u4e0b\u9762\u4e3a\u60a8\u5217\u51fa\u4e00\u4e9b\u63a8\u8350\u6d4f\u89c8\u5668<br /><br /><h1 id='goon' style='font-size:20px;cursor:pointer;'>>>>\u7EE7\u7EED\u8BBF\u95EE</h1>"};var isChrome=navigator.userAgent.toLowerCase().match(/chrome/)!=null;if(isChrome){alert('Chrome');}else{var option=$.extend(defaults,options);return this.each(function(){var $this=$(this);initialize($this,option.support,option.title,option.text);});}};})(jQuery);

@@ -1,0 +1,8 @@
+body{ background-color:#f6f6f6;margin:0; padding:0; color:#999999;}
+div{ overflow:hidden;}
+.head{border:none; width:960px; height:50px; background-color:#FF0033;margin:5px auto;}
+.main{border:none; width:960px; height:600px; background-color:#3300CC;margin:0px auto;}
+.foot{border:none; width:960px; height:50px; background-color:#CC33CC;margin:0px auto;}
+div.left-nav{background-color:#FFFFFF; width:250px; height:600px; float:left; margin-left:5px;}
+.right-content{background-color:#33CC33; width:700px; height:600px; float:right; margin-left:5px;}
+.content{background-color:#FFFFFF; width:700px; height:600px; float:right; border:none;}

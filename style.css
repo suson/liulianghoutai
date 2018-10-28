@@ -1,0 +1,496 @@
+* {
+    margin:0px;
+	padding:0px;
+}
+.clearer{
+	margin:0; padding:0; line-height:1px; height:1px; clear:both; display:block;
+	}
+body {
+    background:#ffffff url("http://images.ipziyuan.com/images/bodybg.gif") repeat-x;
+	margin:0px;
+	font-size:12px;
+	}
+div { 
+    margin-left:auto;
+	margin-right:auto;
+	line-height:24px;
+	font-family:"arial";
+	color:#333333; 
+	}
+hr  {
+    height:0px; 
+	border:0px; 
+	border-top:1px solid #ddd;
+	width:96%
+	}
+ol, ul {
+    list-style: none;
+    }
+img {
+    border: 0;
+	vertical-align: middle;
+    }
+a   {
+    color:#333333; 
+	text-decoration:none;
+	}
+a:hover {
+    color:#3372a2;
+	text-decoration:underline;
+	}
+a.link {
+    color:#3372a2;
+	}
+a.redcolor {
+    color:#CB4721;
+	}
+a.redcolor:hover {
+    color:#222;
+	}
+.header {
+    height:110px;
+	margin-top:0px;
+	}
+.logo {
+    padding-left:40px;
+	padding-top:23px;
+	}
+.mainbox {
+    width:968px;
+	}
+.mainpage {
+    width:auto;
+	padding-top:8px;
+	}
+.mainimg {
+    width:auto;
+	vertical-align: middle;
+	margin:0 5px 15px 15px;
+	}
+.mainimg_p {
+    width:auto;
+	margin:0 5px 25px 15px;
+	background:#ffffff url("http://images.ipziyuan.com/images/index_down.jpg") no-repeat 15px;
+	height:220px;
+	}
+.mainimg_p_text {
+    width:300px;
+	padding:40px 20px 15px 35px;
+	}
+.mainimg_p_text img{
+    
+	margin:15px 15px 15px 0;
+	}
+.menu {
+    width:948px;
+	position:absolute;
+	margin-top:-50px;
+	}
+.nav{
+	width:730px;
+	margin-left:300px;
+}
+.nav .master{
+	float:left; 
+	height:29px; 
+	overflow:hidden;
+}
+.nav .master a{
+	float:left; 
+	text-align:center; 
+	font-weight:bold; 
+	background:url("http://images.ipziyuan.com/images/tabs.gif") no-repeat left -29px; 
+	width:84px; 
+	height:29px; 
+	margin-right:1px;
+}
+.nav .master a span{
+	color:#144e7b; 
+	display:block; 
+	font-size:14px; 
+	line-height:34px;
+}
+.nav .master a.actived span{
+	color:white; 
+	display:block; 
+	line-height:30px;
+}
+.nav .master a.inside{
+	background:url("http://images.ipziyuan.com/images/tabs.gif") no-repeat left -58px;	
+}
+.nav .master a.inside span{
+	color:white;
+}
+.nav .master a.outside{
+	background:url("http://images.ipziyuan.com/images/tabs.gif") no-repeat left 0px;	
+}
+.nav .master a.outside span{
+	color:white;
+}
+.nav .secondly{
+	float:right; 
+	line-height:18px; 
+	padding-top:4px; 
+	margin:0 10px;
+}
+.nav .secondly a{
+	margin:0 10px; 
+	padding-left:19px; 
+	float:left;
+}
+.nav .secondly a.feedback{
+	padding-top:2px;
+	color:red;
+	background:url("http://images.ipziyuan.com/images/icons_vertical.gif") no-repeat 0 -38px;
+}
+.nav .secondly a.help{
+	padding-top:2px;
+	color:red;
+	background:url("http://images.ipziyuan.com/images/icons_vertical.gif") no-repeat 0 -57px;
+}
+/*���CSS*/
+.left {
+    width:268px;
+	float:left;
+	}
+.leftimg {
+    width:256px;
+	margin:0 5px 15px 15px;
+	}
+.leftbox {
+    width:256px;
+	margin:0 5px 15px 15px;
+	}
+.leftbox_title {
+    background:url("http://images.ipziyuan.com/images/leftbox_r1_c1.gif") no-repeat;
+	padding:4px 0 2px 15px;
+	line-height:27px;
+	font-size:14px;
+	font-weight:bold;
+	color:#213b4a;
+	}
+.leftbox_title span {
+	float:right;
+	padding-right:15px;
+	font-size:12px;
+}
+.leftbox_content {
+    background:url("http://images.ipziyuan.com/images/leftbox_r2_c1.gif") repeat-y;
+	padding-top:5px;
+}
+.leftbox_content li{
+    padding:4px 0 2px 15px;
+	line-height:20px;
+}
+.leftbox_content li span{
+	float:right;
+	color:#A8A8A8;
+	padding-right:5px;
+}
+.leftbox_bottom {
+    height:8px;
+    background:url("http://images.ipziyuan.com/images/leftbox_r4_c1.gif") no-repeat;
+    overflow:hidden; 
+	margin:0px;
+	padding:0px;
+	clear:both;
+}
+/*�ұ�CSS*/
+.right {
+    width:680px;
+	float:right;
+	}
+.rightimg {
+    width:668px;
+	margin:0 5px 15px 5px;
+	}
+.rightbox {
+    width:660px;
+	margin:0 5px 10px 5px;
+	}
+.rightbox_title {
+	background:url("http://images.ipziyuan.com/images/rightbox_r1_c1.gif") no-repeat;
+	padding:4px 0 2px 15px;
+	line-height:27px;
+	font-size:14px;
+	font-weight:bold;
+	}
+.rightbox_title span {
+	float:right;
+	padding-right:15px;
+	font-size:12px;
+}
+.rightbox_content {
+	background:url("http://images.ipziyuan.com/images/rightbox_r2_c1.gif") repeat-y;
+	padding-top:5px;
+}
+.rightbox_content li.a{
+	padding:4px 0 2px 15px;
+	line-height:20px;
+	font-weight:bold;
+}
+.rightbox_content li.q{
+	padding:4px 0 2px 15px;
+	line-height:16px;
+}
+.rightbox_bottom {
+    height:8px;
+    background:url("http://images.ipziyuan.com/images/rightbox_r4_c1.gif") no-repeat;
+    overflow:hidden; 
+	margin:0px;
+	padding:0px;
+	clear:both;
+}
+.how{
+	background:url("http://images.ipziyuan.com/images/how-bg.gif"); 
+	height:220px; 
+	width:256px;
+}
+.how .left-edge{
+	background:url("http://images.ipziyuan.com/images/how-left.gif") no-repeat left; 
+	height:220px;
+}
+.how .right-edge{
+	background:url("http://images.ipziyuan.com/images/how-right.gif") no-repeat right; 
+	height:220px;
+}
+.how .title{
+	padding:5px 0 9px 12px;
+}
+.how .steps{
+	padding-top:2px;
+}
+.how ul{
+	margin:0; 
+	padding:0 2px;
+}
+.how li{
+	margin:0; 
+	padding:0; 
+	list-style:none;
+}
+.how a{
+	border:0px; 
+	line-height:25px; 
+	display:block; 
+	padding:1px 0 1px 28px;
+}
+.how a:hover{
+	border-top:1px #D1D6DF solid; 
+	border-bottom:1px #D1D6DF solid; 
+	background:#EBF0F8; 
+	text-decoration:none; 
+	padding:0 0 0 28px;
+}
+.top{
+	background:url("http://images.ipziyuan.com/images/feature-top-bg.gif"); 
+	height:71px;
+	width:660px;
+	margin:0 5px 0 5px;
+}
+.top-left{
+	background:url("http://images.ipziyuan.com/images/feature-top-left.gif") no-repeat left; 
+	height:71px;
+}
+.top-right{
+	background:url("http://images.ipziyuan.com/images/feature-top-right.gif") no-repeat right; 
+	height:71px;
+}
+.top-right img{
+	margin:15px 0 0 20px;
+}
+.content{
+	background:url("http://images.ipziyuan.com/images/feature-main-bg.gif");
+	width:650px;
+	margin-top: 0;
+	margin-right: 5px;
+	margin-bottom: 0;
+	margin-left: 5px;
+}
+.bg{
+	background:url("http://images.ipziyuan.com/images/feature-main-bgv.gif") repeat-x top;
+}
+.content-footer{
+	background:url("http://images.ipziyuan.com/images/feature-main-bottom.gif"); 
+	height:7px; 
+	overflow:hidden; 
+	width:660px; 
+	margin:0 5px 15px 5px;
+	clear:both;
+}
+.soft-ui{
+	float:left;
+}
+.soft-ui ui{
+	width:220px;
+}
+.soft-ui li{
+	padding:10px 5px 0 30px;
+	vertical-align: middle;
+}
+.feature{
+	float:right; 
+	width:420px; 
+	padding-right:41px;
+}
+.feature .intro{
+	line-height:20px; 
+	padding:0; 
+	margin:0; 
+	padding-top:14px;
+}
+.feature .request{
+	color:#5D5D5B; 
+	line-height:20px; 
+	margin-top:10px; 
+	margin-left:20px;
+}
+.feature .request{
+	margin-top:0; 
+	padding-left:10px; 
+	margin-top:10px;
+	list-style-type:disc;
+}
+.feature .feas{
+	border:1px #E3E3E3 solid; 
+	float:left; 
+	line-height:23px; 
+	color:#5D5D5B; 
+	padding:10px 15px 10px 90px; 
+	margin-bottom:10px; 
+	width:300px;
+}
+.feature .expand{
+	height:52px;
+}
+.feature .feas:hover,.feature .feas:hover strong{
+	color:#2B60B1; 
+	text-decoration:none;
+}
+.feature .feas strong{
+	font-size:14px; 
+	display:block; 
+	color:#333333;
+}
+.feature_p{
+	float:right; 
+	width:650px; 
+	padding-right:25px;
+}
+.feature_p .intro{
+	line-height:20px; 
+	padding:0; 
+	margin:0; 
+	padding-top:14px;
+}
+.feature_p .request{
+	color:#5D5D5B; 
+	line-height:20px; 
+	margin-top:10px; 
+	margin-left:20px;
+}
+.feature_p .request{
+	margin-top:0; 
+	padding-left:10px; 
+	margin-top:10px;
+	list-style-type:disc;
+}
+.feature_p .feas{
+	border:1px #E3E3E3 solid; 
+	float:left; 
+	line-height:23px; 
+	color:#5D5D5B; 
+	padding:10px 15px 10px 90px; 
+	margin-bottom:10px; 
+	width:500px;
+}
+.feature_p .expand{
+	height:52px;
+}
+.feature_p .feas:hover,.feature .feas:hover strong{
+	color:#2B60B1; 
+	text-decoration:none;
+}
+.feature_p .feas strong{
+	font-size:14px; 
+	display:block; 
+	color:#333333;
+}
+.icon01{
+	background:url("http://images.ipziyuan.com/images/icon_1_min.gif") #FAFAFA no-repeat 17px 10px;
+}
+.icon02{
+	background:url("http://images.ipziyuan.com/images/icon_2_min.gif") #FAFAFA no-repeat 17px 10px;
+}
+.icon03{
+	background:url("http://images.ipziyuan.com/images/icon_3_min.gif") #FAFAFA no-repeat 17px 10px;
+}
+.bottom { 
+    width:auto;
+	padding-top:8px;
+	}
+.bot {
+    width:948px;
+	height:50px;
+	border-top:1px solid #BCDBE6;
+	}
+.botext { 
+    float:right;
+	width:850px;
+	}
+.bottomicon{
+    width:52px;
+    float:left; 
+	margin:10px 10px 0 10px; 
+	border-right:1px solid #A0C6D3; 
+	}
+/*- Menu Tabs 6--------------------------- */
+#tabs6 {
+      float:left;
+      width:910px;
+      line-height:normal;
+      }
+#tabs6 ul {
+	  margin:0;
+	  padding:10px 10px 0 380px;
+	  list-style:none;
+      }
+#tabs6 li {
+      display:inline;
+      margin:0;
+      padding:0;
+      }
+#tabs6 a {
+      float:left;
+      background:url("http://images.ipziyuan.com/images/tableft6.gif") no-repeat left top;
+      margin:0;
+      padding:0 0 0 4px;
+      text-decoration:none;
+      }
+#tabs6 a span {
+      float:left;
+      display:block;
+      background:url("http://images.ipziyuan.com/images/tabright6.gif") no-repeat right top;
+      padding:8px 20px 8px 10px;
+      color:#FFF;
+      }
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#tabs6 a span {float:none;}
+/* End IE5-Mac hack */
+#tabs6 a:hover span {
+      color:#FFF;
+      }
+#tabs6 a:hover {
+      background-position:0% -42px;
+      }
+#tabs6 a:hover span {
+      background-position:100% -42px;
+	  color:#222;
+      }
+#tabs7 a {
+      background-position:0% -42px;
+      }
+#tabs7 a span {
+      background-position:100% -42px;
+	  color:#222;
+}

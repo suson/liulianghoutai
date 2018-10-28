@@ -1,0 +1,144 @@
+﻿.index-02 {
+    width: 100%;
+    height: 100px;
+    background: #036EB8;
+}
+
+.index-02-n {
+    width: 1000px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.index-02-n dl {
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    height: 100px;
+    float: left;
+}
+
+.index-02-n dl dt {
+    padding: 0;
+    margin: 0;
+    width: 80px;
+    float: left;
+    height: 100px;
+}
+
+.index-02-n dl dt img {
+    margin: 30px 0 0 10px;
+}
+
+.index-02-dd1 {
+    width: 170px;
+    float: left;
+    margin-top: 30px;
+    height: 24px;
+    line-height: 24px;
+    color: #fff;
+    font-size: 12px;
+    text-align: left;
+}
+
+.index-02-dd2 {
+    width: 170px;
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    color: #fff;
+    font-size: 12px;
+    text-align: left;
+}
+
+/*数据展示样式*/
+#show-box {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.show {
+    text-align: center;
+}
+
+.show span {
+    display: block;
+}
+
+.show .show-img {
+    color: #C9C9C9;
+}
+
+.show .show-title {
+    color: #999;
+}
+
+.show .show-number {
+    font-size: 30px;
+    color: #4c4f53;
+    font-weight: 600;
+}
+
+.friendly-link {
+    background: #339F79;
+}
+
+.friendly-link div.content {
+    width: 1200px;
+    margin: 0 auto;
+    color: #ffffff;
+    padding: 10px
+}
+
+.friendly-link ul {
+    list-style: none
+}
+
+.friendly-link ul li {
+    display: block;
+    float: left;
+    margin-right: 20px;
+}
+
+.friendly-link a {
+    color: #ffffff;
+}
+
+#pop {
+    background: #fff;
+    width: 320px;
+    font-size: 12px;
+    position: fixed;
+    right: 0;
+    bottom: 22px;
+}
+
+#popHead {
+    line-height: 32px;
+    background: #2d3e50;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 12px;
+    padding: 0 0 0 10px;
+}
+
+#popHead span.title {
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 18px;
+    height: 18px;
+}
+
+#popHead #popClose {
+    position: absolute;
+    right: 10px;
+    top: 1px;
+}
+
+#popHead a#popClose:hover {
+    color: #f00;
+    cursor: pointer;
+}
+
+#pop #popContent {
+    padding: 5px;
+}

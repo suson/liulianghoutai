@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<updateFiles>
+  <file path="1.txt" url="http://www.emw159.com/up/1.txt" lastver="1.1.1.0" size="20" needRestar="false"></file>
+  <file path="2.txt" url="http://www.emw159.com/up/2.txt" lastver="1.1.0.0" size="15" needRestar="false"></file>
+</updateFiles>

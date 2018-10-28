@@ -1,0 +1,168 @@
+.head H1 {
+	BACKGROUND: url(../images/logo.gif) no-repeat; FLOAT: left; WIDTH: 245px; TEXT-INDENT: -9999px; HEIGHT: 81px
+}
+UL#banner_current {
+	Z-INDEX: 10; RIGHT: -7px; WIDTH: 273px; POSITION: absolute; TOP: 4px; HEIGHT: 245px
+}
+UL#banner_current LI {
+	MARGIN-BOTTOM: -3px; HEIGHT: 49px
+}
+UL#banner_current .banner_title {
+	PADDING-LEFT: 66px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-TOP: 5px; HEIGHT: 49px
+}
+UL#banner_current P.title {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #87d9ec; LINE-HEIGHT: 20px; HEIGHT: 20px
+}
+UL#banner_current P.des {
+	FONT-SIZE: 12px; COLOR: #67c1d5; LINE-HEIGHT: 20px; HEIGHT: 20px
+}
+UL#banner_current LI A.current {
+	HEIGHT: 49px
+}
+UL#banner_current .locoy {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/locoy_item.png", sizingMethod="")
+}
+UL#banner_current .version {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/soft_item.png", sizingMethod="")
+}
+UL#banner_current .qq {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/qq_item.png", sizingMethod="")
+}
+UL#banner_current .bulletin {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/anno_item.png", sizingMethod="")
+}
+UL#banner_current .newweb {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/web_item.png", sizingMethod="")
+}
+UL#banner_current LI A.current {
+	BACKGROUND: none transparent scroll repeat 0% 0%; FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/current.png", sizingMethod="")
+}
+.soft .free {
+	BACKGROUND: none transparent scroll repeat 0% 0%; FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/free.png", sizingMethod="")
+}
+.contact .contact_con A.chat_qq {
+	BACKGROUND: url(../images/ie6_item_bg.png) no-repeat 0px 0px
+}
+.left .products_des .left_item P {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; BACKGROUND: url(../images/ie6_item_bg.png) no-repeat; PADDING-BOTTOM: 5px; WIDTH: 120px; TEXT-INDENT: -9999px; PADDING-TOP: 5px; HEIGHT: 63px
+}
+.left .products_des .left_item P.tongyong {
+	BACKGROUND-POSITION: -10px -145px
+}
+.left .products_des .left_item P.wending {
+	BACKGROUND-POSITION: -10px -250px
+}
+.left .products_des .left_item P.kuozhan {
+	BACKGROUND-POSITION: -10px -348px; HEIGHT: 75px
+}
+.contact .contact_con DL.tel DD {
+	BACKGROUND: url(../images/ie6_item_bg.png) no-repeat 8px -478px
+}
+.contact .contact_con DL DD.fax {
+	BACKGROUND: url(../images/ie6_item_bg.png) no-repeat 8px -506px
+}
+.contact .contact_con DL.mail {
+	MARGIN-TOP: 5px; WIDTH: 285px; HEIGHT: 25px
+}
+.contact .contact_con DL.mail DD {
+	PADDING-LEFT: 17px; BACKGROUND: url(../images/ie6_item_bg.png) no-repeat 0px -530px; FLOAT: left; WIDTH: 223px; LINE-HEIGHT: 25px; HEIGHT: 25px
+}
+.left .products_des .des_bottom LI.little_item {
+	PADDING-LEFT: 60px; BACKGROUND: url(../images/ie6_item.gif) no-repeat; FLOAT: left; WIDTH: 260px; MARGIN-RIGHT: 5px; HEIGHT: 50px
+}
+.left .products_des .des_bottom LI.page {
+	BACKGROUND-POSITION: 0px 0px
+}
+.left .products_des .des_bottom LI.file {
+	BACKGROUND-POSITION: 0px -50px
+}
+.left .products_des .des_bottom LI.tran {
+	BACKGROUND-POSITION: 0px -100px
+}
+.left .products_des .des_bottom LI.rep {
+	BACKGROUND-POSITION: 0px -150px
+}
+.left .products_des .des_bottom LI.auto {
+	BACKGROUND-POSITION: 0px -200px
+}
+.left .products_des .des_bottom LI.data {
+	BACKGROUND-POSITION: 0px -250px
+}
+.left .products_des .des_bottom LI.code {
+	BACKGROUND-POSITION: 0px -300px
+}
+.left .products_des .des_bottom LI.auth {
+	BACKGROUND-POSITION: 0px -350px
+}
+.row_tips A {
+	DISPLAY: block; BACKGROUND: url(../images/ie6_big_item_bg.png) no-repeat; WIDTH: 163px; CURSOR: pointer; PADDING-TOP: 170px; HEIGHT: 40px; outline: 0
+}
+.row_tips LI.what A {
+	BACKGROUND-POSITION: 0px top
+}
+.row_tips LI.learn A {
+	BACKGROUND-POSITION: -160px top
+}
+.row_tips LI.share A {
+	BACKGROUND-POSITION: -320px top
+}
+.row_tips LI.support A {
+	BACKGROUND-POSITION: -480px top
+}
+.row_tips LI.what A:hover {
+	BACKGROUND-POSITION: 0px -228px; COLOR: #669900
+}
+.row_tips LI.learn A:hover {
+	BACKGROUND-POSITION: -160px -228px; COLOR: #669900
+}
+.row_tips LI.share A:hover {
+	BACKGROUND-POSITION: -320px -228px; COLOR: #669900
+}
+.row_tips LI.support A:hover {
+	BACKGROUND-POSITION: -480px -228px; COLOR: #669900
+}
+.row_tips LI.what A.active {
+	BACKGROUND-POSITION: 0px -228px; COLOR: #669900
+}
+.row_tips LI.what A.active:hover {
+	BACKGROUND-POSITION: 0px -228px; COLOR: #669900
+}
+.row_tips LI.learn A.active {
+	BACKGROUND-POSITION: -160px -228px; COLOR: #669900
+}
+.row_tips LI.learn A.active:hover {
+	BACKGROUND-POSITION: -160px -228px; COLOR: #669900
+}
+.row_tips LI.share A.active {
+	BACKGROUND-POSITION: -320px -228px; COLOR: #669900
+}
+.row_tips LI.share A.active:hover {
+	BACKGROUND-POSITION: -320px -228px; COLOR: #669900
+}
+.row_tips LI.support A.active {
+	BACKGROUND-POSITION: -480px -228px; COLOR: #669900
+}
+.row_tips LI.support A.active:hover {
+	BACKGROUND-POSITION: -480px -228px; COLOR: #669900
+}
+.class_soft_info {
+	MARGIN-TOP: -7px
+}
+.search_top UL LI.hover {
+	BACKGROUND: url(../images/menu_top.gif) no-repeat
+}
+.search_top UL LI.hover UL {
+	BACKGROUND: url(../images/menu_bottom.gif) no-repeat
+}
+UL#div_login LI.form_w FORM {
+	MARGIN-TOP: 8px
+}
+.footer .footer_l {
+	BACKGROUND: url(../images/item3_bg.gif) no-repeat 0px 0px
+}
+.footer .footer_r {
+	BACKGROUND: url(../images/item3_bg.gif) no-repeat 0px -260px
+}
+.footer .footer_c {
+	BACKGROUND: url(../images/item3_bg.gif) repeat-x 0px -130px
+}

@@ -1,0 +1,2 @@
+$(document).ready(function(){$.ajaxSetup({cache:"false"});$("#tbl_search_form").live("submit",function(b){$search_form=$(this);b.preventDefault();$("#searchresults").empty();PMA_ajaxShowMessage(PMA_messages.strSearching);$search_form.find("input:hidden").is("#ajax_request_hidden")||$search_form.append('<input type="hidden" id="ajax_request_hidden" name="ajax_request" value="true" />');$.post($search_form.attr("action"),$search_form.serialize(),function(a){typeof a=="string"?$("#searchresults").html(a):
+$("#searchresults").html(a.message)})})},"top.frame_content");

@@ -1,0 +1,69 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+}
+
+body {
+    overflow: hidden;
+}
+
+table {
+    border: 0px;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    width: 100%;
+    height: 100%;
+    color: #0A8745;
+}
+
+a:active
+{
+	color:#0A8745;
+}
+a:focus
+{
+	color:#0A8745;
+}
+a:hover
+{
+	color:#0A8745;
+}
+a:link
+{
+	color:#0A8745;
+}
+a:visited
+{
+	color:#0A8745;
+}
+
+.TD_Title {
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.Input_Text {
+    border: solid 1px;
+    border-color: #A1BCA3;
+    background-color: #E5F6C0;
+}
+
+.Input_Button {
+    border: solid 1px;
+    border-color: #91A254;
+    background-color: #E6F5BE;
+	cursor:pointer;
+}
+#Div_AjaxBack
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-color:#000000;
+	z-index:1001;
+	filter:Alpha(opacity=60);
+}

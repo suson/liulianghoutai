@@ -1,0 +1,11 @@
+<?php 
+define('SVC_OPTIMIZE',10); 
+define('SVC_IP8',3000); 
+define('SVC_IP101',1000); 
+define('SVC_IP103',2000); 
+define('SVC_IP106',3000); 
+define('SVC_IP108',6000); 
+define('SVC_IP110',10000); 
+define('SVC_IP115',15000); 
+define('SVC_IP120',20000); 
+?>

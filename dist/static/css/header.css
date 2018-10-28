@@ -1,0 +1,142 @@
+﻿/** header */
+body{
+  font-size: 14px;
+}
+.am-container{
+  max-width: 1100px;
+  padding-left: 0; 
+  padding-right: 0; 
+}
+fieldset{
+  padding: 0;
+  margin: 0;
+}
+.am-g-fixed {
+  max-width: 1100px;
+}
+.header-login{
+  height: 35px;
+  line-height: 35px;
+  background: #2e3a4a;
+  font-size: 12px;
+}
+.header-nav{
+  height: 65px;
+  line-height: 65px;
+  /*border-bottom: 1px solid #d7dadb;*/
+  background-color: #FEFEFE;
+  transition: 0.5s;
+
+}
+#vld-tooltip{
+    display: none;
+}
+/*.am-topbar{height: 100px;}*/
+.am-with-topbar-fixed-top {padding-top: 101px;}
+
+.am-topbar-inverse {
+  background-color: #FEFEFE;
+  border-color: #D7DADB;
+  color: #eee;
+  margin: 0;
+}
+
+.header-nav-left img{height: 45px;}
+
+.am-nav-pills>li {width: 100px;text-align: center;}
+.am-topbar-inverse .header-nav-ul>li>a {color: #4a4a4a;line-height: 65px;}
+.am-topbar-inverse .header-nav-ul>li>a:hover, .am-topbar-inverse .header-nav-ul>li>a:focus {
+  color: #fff;
+  background-color: rgba(14, 144, 210, 1);
+}
+.am-topbar-inverse .header-nav-ul>li.am-active>a, .am-topbar-inverse .am-topbar-nav>li.am-active>a:hover, .am-topbar-inverse .header-nav-ul>li.am-active>a:focus {
+  color: #fff;
+  background-color: rgba(14, 144, 210, 1);
+}
+.am-topbar-inverse .header-nav-ul>li>a:hover:after, .am-topbar-inverse .header-nav-ul>li>a:focus:after {
+  border-bottom-color: #FFFFFF;
+}
+
+.header-login-yes>li{
+  float: left;
+  list-style-type:none;
+  margin-left: 25px;
+}
+.header-login-yes li a:hover{
+  color: #0e90d2;
+}
+.crxb{
+  display: none;
+}
+
+  #vld-tooltip {
+    position: absolute;
+    z-index: 1000;
+    padding: 5px 10px;
+    background: #F37B1D;
+    min-width: 150px;
+    color: #fff;
+    transition: all 0.15s;
+    box-shadow: 0 0 5px rgba(0,0,0,.15);
+    display: none;
+  }
+
+  #vld-tooltip:before {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -8px;
+    content: "";
+    border-width: 0 8px 8px;
+    border-color: transparent transparent #F37B1D;
+    border-style: none inset solid;
+  }
+
+  .logo-wz{
+      height: 65px;
+  }
+  .logo-wz a{
+      color: #9E9E9E;
+      font-size: 18px;
+      padding-left: 20px;
+  }
+
+
+.qqserver a{
+    color:#666;text-decoration:none;
+}
+/*客服代码部分*/
+.qqserver-body ul{
+    padding-left: 0;
+    margin: 0;
+}
+.qqserver .qqserver-header:after,.qqserver .qqserver-header:before,.qqserver li a:after,.qqserver li a:before{display:table;content:' '}
+.qqserver .qqserver-header:after,.qqserver li a:after{clear:both}
+.qqserver .qqserver-header,.qqserver li a,.tabs,.user-main,.view-category,.view-category-list>li{*zoom:1}
+.qqserver{position:fixed;top:50%;right:0;height:209px;margin-top:-104px}
+.qqserver.unfold .qqserver-body{right:0}
+.qqserver .qqserver-body{position:absolute;  font-size: 12px;right:-144px;width:145px;height:220px;padding:12px 10px;-webkit-transition:.3s cubic-bezier(.19,1,.22,1);-o-transition:.3s cubic-bezier(.19,1,.22,1);transition:.3s cubic-bezier(.19,1,.22,1);border:1px solid #62b651;border-radius:4px;background:#f4f7fa}
+.qqserver .qqserver_fold{position:absolute;right:0;padding:14px 7px;cursor:pointer;border-top-left-radius:4px;border-bottom-left-radius:4px;background:#70ca5d}
+.qqserver .qqserver-header{padding-bottom:10px;padding-left:6px;border-bottom:1px dashed #d1d4cc}
+.qqserver .qqserver-header *{float:left}
+.qqserver .qqserver_arrow{margin-top:-1px;margin-left:7px;cursor:pointer}
+.qqserver li{margin-top:6px ;list-style:none;}
+.qqserver li a{display:block;padding:6px 12px 4px}
+.qqserver li a div{font-size:14px;float:left;margin-right:11px;color:#697466}
+.qqserver li a span{font-size:12px;line-height:18px;float:left;text-indent:4px;color:#fff}
+.qqserver li a span.qqserver-service-alert{font-weight:400;display:block}
+.qqserver li a:hover{text-decoration:none;border-radius:4px;background:#eaebe9}
+.qqserver li a:hover div{color:#62b651}
+.qqserver .qqserver-footer{margin-top:10px;padding-top:14px;padding-bottom:14px;padding-left:11px;border-top:1px dashed #d1d4cc}
+.qqserver .qqserver-footer .text-primary{color:#70CA5D;font-size:14px;}
+.qqserver .qqserver_icon-alert{display:inline-block;margin-right:10px;vertical-align:-3px;*display:inline;*zoom:1;*vertical-align:-1px}
+.qqserver-header div{width:90px;height:18px;background-image:url(../images/lanren.png);background-position:-419px -80px}
+.qqserver_icon-alert{width:16px;height:14px;background-image:url(../images/lanren.png);background-position:-595px -85px}
+.qqserver li a span{width:30px;height:23px;background-image:url(../images/lanren.png);background-position:-265px 0}
+.qqserver li a .qqserver-service-alert{width:30px;height:22px;background-image:url(../images/lanren.png);background-position:-342px 0}
+.qqserver_fold div{width:26px;height:132px;background-image:url(../images/lanren.png);background-position:0 0}
+.qqserver_fold:hover div{width:26px;height:132px;background-image:url(../images/lanren.png);background-position:-27px 0}
+.qqserver_arrow{width:18px;height:18px;background-image:url(../images/lanren.png);background-position:-435px 0}
+.qqserver_arrow:hover{width:18px;height:18px;background-image:url(../images/lanren.png);background-position:-435px -38px}

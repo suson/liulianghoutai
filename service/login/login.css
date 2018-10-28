@@ -1,0 +1,33 @@
+body {
+  background: url(../images/login/reg-login-bg.png)right -200px no-repeat;
+  background-color: #f3f4f8;
+}
+.login-leftimg img{
+  width: 100%;
+  height: 400px;
+}
+.register-leftimg img{
+  width: 100%;
+  height: 545px;
+}
+.login{
+  background-color: rgba(255,255,255,.5);
+}
+.login .login-rightform{
+  padding: 30px 45px 30px 30px;
+}
+.login .login-formtext{
+  padding-bottom: 16px;
+  color: #0dba8f;
+  border-bottom: solid 1px #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: proxima-nova,"Hiragino Sans GB","Microsoft YaHei","Wenquanyi Micro Hei","WenQuanYi Micro Hei Mono","WenQuanYi Zen Hei","WenQuanYi Zen Hei","Apple LiGothic Medium",SimHei,"ST Heiti","WenQuanYi Zen Hei Sharp";
+}
+.login [class*=am-icon-]{
+  left: 10px;
+  font-size: 18px;
+  padding: 2px 0;
+  color: #95a5a6;
+}

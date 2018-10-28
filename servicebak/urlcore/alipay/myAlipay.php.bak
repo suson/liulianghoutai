@@ -1,0 +1,146 @@
+<?php
+/*
+ * 自定义函数
+ */
+require_once "../cfg/rechangeTaxcfg.php";
+require_once "../cfg/gradeScorecfg.php";
+require_once("../../../dbcfg.php");
+
+	function getStatus($out_trade_no) {
+		/*
+		 * 获取交易单的的当前状态
+		 */
+		$HOST=HOST;
+		$USER=USER;
+		$PWD=PWD;
+		$DATABASE=DBNAME;
+		$TABLE=TB_ALIPAYTRADE;
+		
+		$qS="SELECT trade_status FROM $TABLE WHERE out_trade_no='$out_trade_no' ;";
+		
+		$link=@mysql_connect($HOST,$USER,$PWD);
+		mysql_select_db($DATABASE,$link);
+		
+		$result=mysql_query($qS,$link);
+		$num=mysql_num_rows($result);
+		if($num != 0){
+			//交易已经处理
+			return 1;
+		}
+		//交易未处理
+		return 0;
+	}
+	
+	function getUserid($out_trade_no){
+		
+		$len=strlen($out_trade_no);
+		$userid=substr($out_trade_no,8,-4);
+		
+		return $userid;
+	}
+	
+	function processTrade($out_trade_no,$trade_no,$subject,$body,$total_fee,$buyer_email){
+		/*
+		 * 处理订单
+		 * 将当前订单插入数据库
+		 * 	 更新用户 账户
+		 * 	  往交易记录中插入当前充值记录
+		 *
+		 */
+		$host=HOST;
+		$user=USER;
+		$pwd=PWD;
+		$dbName=DBNAME;
+		$tb_alipaytrade=TB_ALIPAYTRADE;
+		$tb_order=TB_ORDER;
+		$tb_account=TB_ACCOUNT;
+		
+		$link=@mysql_connect($host,$user,$pwd);
+		@mysql_select_db($dbName,$link);
+		
+		//将当前订单插入数据库
+		$aliField="out_trade_no,trade_no,total_fee,subject,body,buyer_email,trade_status";
+		$qInsertAlipay="INSERT INTO $tb_alipaytrade($aliField) VALUES('$out_trade_no','$trade_no',$total_fee,'$subject','$body','$buyer_email',1);";
+		@mysql_query($qInsertAlipay,$link);
+		//更新管理员信息
+		updateAdmin($total_fee);
+		//更新用户 账户
+		$userid=getUserid($out_trade_no);
+		updateAccount($userid,$total_fee * 100,$out_trade_no,$trade_no);
+	}
+	
+	function updateAccount($userid,$cent,$out_trade_no,$trade_no){
+			$level[]=GRADESCORE1;
+			$level[]=GRADESCORE2;
+			$level[]=GRADESCORE3;
+			$level[]=GRADESCORE4;
+			
+			$s=SCORE * 0.01 ;//计算奖励积分为充值金额的倍 数
+			$p=PMONEY * 0.01;//计算赠送金额
+			$l=LMONEY * 0.01;//计算奖励金额
+			
+			$host=HOST;
+			$user=USER;
+			$pwd=PWD;
+			$dbName=DBNAME;
+			$tb_account=TB_ACCOUNT;
+
+			$link=mysql_connect($host,$user,$pwd);
+			mysql_select_db($dbName);
+			
+			$result=mysql_query("SELECT score,money FROM account WHERE userid='$userid';",$link);
+			$row=mysql_fetch_array($result,MYSQL_ASSOC);
+			$to_score=$row['score']+$cent/100 * $s;
+			$pm=$cent *$p;
+			$lm=$cent *$l;
+			$money=$row['money'] + $pm + $lm + $cent;
+			
+			for($i=0;$i<4 && $to_score>$level[$i];$i++);
+			$to_level=$i;
+			
+			$qUpdateAccount="UPDATE account SET score=$to_score,money=$money,pmoney=pmoney+$pm,lmoney=lmoney+$lm,level=$i WHERE userid=$userid ;";
+			$bSuc=@mysql_query($qUpdateAccount,$link);
+			if(!$bSuc){
+				//当更新用户用户账户发生错误时 添加日志记录
+				$file="./log.html";
+				$fp=fopen($file,"a+");
+				$cnt="<div><table><tbody><tr><th>交易订单</th><th>支付宝订单</th><th>充值金额</th><th>错误信息</th></tr>";
+				$cnt.="<tr><td>$out_trade_no </td><td>$trade_no </td><td>". $cent/100 ."</td><td>".mysql_errno.":".mysql_error()."</td></tr>";
+				$cnt .="<tbody><table></div>";
+				fwrite($fp,$cnt);
+				
+			}else{
+				//更新用户的最近交易时间
+				@mysql_query("UPDATE users SET otime=now() WHERE userid=$userid;",$link);
+				//更新交易记录表
+				insertOrder($userid,$cent,$money,$pm,$lm);
+			}
+			
+	}
+	
+	//往交易记录中插入当前充值记录
+	function insertOrder($userid,$val,$bae,$pm,$lm){
+			$host=HOST;
+			$user=USER;
+			$pwd=PWD;
+			$dbName=DBNAME;
+			$tb_order=TB_ORDER;
+
+			$link=mysql_connect($host,$user,$pwd);
+			mysql_select_db($dbName);
+			$field="userid,val,bae,pm,lm,otype,otime";
+			$values="$userid,$val,$bae,$pm,$lm,4,now()";
+			$qInsertOrder="INSERT INTO $tb_order (userid,val,bae,pm,lm,otype,otime) VALUES($values);";
+			$bSuc=@mysql_query($qInsertOrder,$link);
+	}
+	
+	function updateAdmin($total_fee){
+		//更新管理员的用户充值总金额字段
+		$link=@mysql_connect(HOST,USER,PWD);
+		@mysql_select_db(DBNAME);
+		$rcMoney=$total_fee*100;
+		$qUpdateCountRechange="UPDATE admins SET countrechange=countrechange+$rcMoney WHERE name='admin';";
+		$bSuc=@mysql_query($qUpdateCountRechange,$link);
+		return $bSuc;
+	}
+?>

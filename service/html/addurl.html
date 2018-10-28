@@ -1,0 +1,110 @@
+﻿<table cellpadding="0" style="width:100%;height:100%;background-color:#FFFFFF;">
+    <tr>
+        <td style="width:13px;height:16px;background-image:url('images/corn_lt.gif');background-repeat:no-repeat;"></td>
+        <td style="width:100%;border-top:solid 1px;border-color:#DBD9D9;"></td>
+        <td style="width:13px;height:16px;background-image:url('images/corn_rt.gif');background-repeat:no-repeat;"></td>
+    </tr>
+    <tr>
+        <td style="border-left:solid 1px;border-color:#DBD9D9;"></td>
+        <td style="vertical-align:top;">
+            <table cellpadding="0" width="100%">
+                <tr>
+                    <td style="width:78px;height:78px;"><img src="images/addurl_logo.gif"/></td>
+                    <td style="width:100%;padding-left:20px;font-size:18px;font-weight:bolder;">龙卷风软件——在线添加网址</td>
+                    <td style="width:54px;text-align:right;vertical-align:top;"><input id="Btn_Close_AddUrl" type="image" src="images/cancel.gif"/></td>
+                </tr>
+                <tr>
+                    <td style="height:20px;"></td>
+                    <td style="text-align:center;vertical-align:top;"><hr size=1 style="color:#DDDDDD;width:480px;" /></td>
+                    <td></td>
+                </tr>
+            </table>
+        </td>
+        <td style="border-right:solid 1px;border-color:#DBD9D9;"></td>
+    </tr>
+    <tr id="TR_AddUrl_Start">
+        <td style="border-left:solid 1px;border-color:#DBD9D9;"></td>
+        <td style="vertical-align:top;">
+            <form action="#" method="post" onsubmit="return false;">
+            <table cellpadding="0" width="100%">
+                <tr>
+                    <td style="width:78px;height:108px;"></td>
+                    <td style="width:100%;">
+                        <table cellpadding="0" width="100%">
+                            <tr>
+                                <td style="width:100px;height:30px;padding-top:3px;text-align:right;">我的网址：</td>
+                                <td style="width:200px;"><input id="Text_Add_Url" name="add_myurl" style="border:solid 1px;border-color:#DDDDDD;padding-top:2px;width:200px;height:20px;" type="text" maxlength="512" value="http://" /></td>
+                                <td style="padding-left:2px;">网址必须以http(s)://开头</td>
+                            </tr>
+                            <tr>
+                                <td style="height:30px;padding-top:3px;text-align:right;">网站名称：</td>
+                                <td style="width:200px;"><input id="Text_Add_My_Site" name="add_urlname" style="border:solid 1px;border-color:#DDDDDD;padding-top:2px;width:200px;height:20px;" type="text" maxlength="20" value=""/></td>
+                                <td style="padding-left:2px;">3-20个字符，不含特殊字符</td>
+                            </tr>
+							<tr>
+                                <td style="height:30px;padding-top:3px;text-align:right;">网址设置：</td>
+                                <td style="width:200px;">
+								    <select id="Select_Set_Template" style="padding-top:2px;width:200px;height:20px;">
+									   <option selected value="0">使用系统默认设置</option>
+									</select>
+								</td>
+                                <td style="padding-left:2px;">新网址将以所选网址进行设置</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:54px;"></td>
+                </tr>
+                <tr>
+                    <td style="height:50px;"></td>
+                    <td style="text-align:center;"><input id="Btn_Submit_AddUrl" name="submit" type="submit" class="btnsubmit" value="填写完毕，立即添加" /></td>
+                    <td></td>
+                </tr>
+            </table>
+            </form>
+        </td>
+        <td style="border-right:solid 1px;border-color:#DBD9D9;"></td>
+    </tr>
+    <tr style="display:none;">
+        <td style="border-left:solid 1px;border-color:#DBD9D9;"></td>
+        <td style="vertical-align:top;">
+            <table cellpadding="0" width="100%">
+                 <tr>
+                    <td style="width:78px;height:50px;"></td>
+                    <td style="width:100%;"><table cellpadding="0" width="100%"><tr><td style="width:30%;text-align:right;"><img src="images/smiley_blue.png" width="32" height="32" alt="" /></td><td style="width:70%;padding-top:3px;padding-left:5px;font-size:20px;font-weight:bold;color:green;">恭喜您添加网址成功！</td></tr></table></td>
+                    <td style="width:54px;"></td>
+                </tr>
+				<tr>
+                    <td style="height:20px;"></td>
+                    <td style="font-size:15px;text-align:center;color:green;">您的网址编号是：<span id="Span_Add_Urlid" style="font-size:17px;font-weight:bold;color:red;"></span></td>
+                    <td></td>
+                </tr>
+				<tr>
+                    <td style="height:20px;"></td>
+                    <td style="font-size:12px;font-weight:bold;color:green;">您可以通过以下方式获得流量：</td>
+                    <td></td>
+                </tr>
+				<tr>
+                    <td style="height:20px;"></td>
+                    <td style="font-size:12px;color:green;">1、付费，将您刚添加的网址<a id="A_Add_Trustee" title="点击开通网址代挂服务" target="_self" href="javascript:void(0)" style="color:blue;font-weight:bold;">开通网址代挂服务</a>；</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="height:20px;"></td>
+                    <td style="font-size:12px;color:green;">2、免费，将网址编号<span id="Span_Add_Urlid2" style="font-weight:bold;color:red;"></span>输到龙卷风流量“我的网址”栏中， 点击开始分享，如图：</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><img src="images/example.jpg"></td>
+                    <td></td>
+                </tr>
+            </table>
+        </td>
+        <td style="border-right:solid 1px;border-color:#DBD9D9;"></td>
+    </tr>
+ <tr>
+        <td style="width:13px;height:16px;background-image:url('images/corn_lb.gif');background-repeat:no-repeat;"></td>
+        <td style="width:100%;border-bottom:solid 1px;border-color:#DBD9D9;"></td>
+        <td style="width:13px;height:16px;background-image:url('images/corn_rb.gif');background-repeat:no-repeat;"></td>
+    </tr>
+</table>

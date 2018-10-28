@@ -1,0 +1,17 @@
+<?php 
+ define('HOST','localhost');
+define('USER','root');
+define('PWD','admin!@#!');
+define('DBNAME','ipziyuan');
+define('DATABASE','ipziyuan');
+define('TB_ACCOUNT','account');
+define('TB_USER','users');
+define('TB_FLOWER','flow');
+define('TB_FILTER','filter');
+define('TB_ORDER','orders');
+define('TB_TDLOGIN','tdlogin');
+define('TB_URL','url');
+define('TB_URLODRS','url_odrs');
+define('TB_URLIP','url_ip');
+define('TB_ALIPAYTRADE','alipay_trade');
+ ?>

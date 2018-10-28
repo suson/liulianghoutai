@@ -1,0 +1,198 @@
+﻿<table cellpadding="0" style="width:100%;height:100%;background-color:#FFFFFF;">
+    <tr>
+        <td style="width:13px;height:16px;background-image:url('images/corn_lt.gif');background-repeat:no-repeat;"></td>
+        <td style="width:100%;border-top:solid 1px;border-color:#DBD9D9;"></td>
+        <td style="width:13px;height:16px;background-image:url('images/corn_rt.gif');background-repeat:no-repeat;"></td>
+    </tr>
+    <tr>
+        <td style="border-left:solid 1px;border-color:#DBD9D9;"></td>
+        <td style="vertical-align:top;">
+            <table cellpadding="0" width="100%">
+                <tr>
+                    <td style="width:89px;height:88px;"><img src="images/urledit_logo.gif"/></td>
+                    <td style="width:100%;padding-left:20px;font-size:18px;font-weight:bolder;">龙卷风软件——流量优化设置 </td>
+                    <td style="width:54px;text-align:right;vertical-align:top;"><input id="Btn_Close_Optimize" type="image" src="images/cancel.gif"/></td>
+                </tr>
+                <tr>
+                    <td style="height:20px;"></td>
+                    <td style="text-align:center;vertical-align:top;"><hr size=1 style="color:#DDDDDD;width:480px;" /></td>
+                    <td></td>
+                </tr>
+            </table>
+        </td>
+        <td style="border-right:solid 1px;border-color:#DBD9D9;"></td>
+    </tr>
+    <tr id="TR_SetOptimize_Start">
+        <td style="border-left:solid 1px;border-color:#DBD9D9;"></td>
+        <td style="vertical-align:top;">
+            <form action="#" method="post" onsubmit="return false;">
+            <table cellpadding="0" width="100%;">
+                <tr>
+                    <td style="width:20%;height:30px;padding-top:3px;text-align:right;">我的网址：</td>
+                    <td style="width:200px;"><input id="Manage_My_Url" maxlength="512" style="width:200px;border:solid 1px;border-color:#DDDDDD;padding-top:2px;height:20px;" type="text"></td>
+                    <td style="padding-left:5px;">网址必须以http(s)://开头 </td>
+                </tr>
+                <tr>
+                    <td style="height:30px;padding-top:3px;text-align:right;">网站名称：</td>
+                    <td><input id="Manage_My_Site" maxlength="20" style="width:200px;border:solid 1px;border-color:#DDDDDD;padding-top:2px;height:20px;" type="text"></td>
+                    <td style="padding-left:5px;">3-20个字符,不含特殊字符 </td>
+                </tr>
+                <tr>
+                    <td colspan=3>
+                        <table cellpadding="0" style="width:100%;">
+                            <tr>
+                                <td style="width:13%;height:30px;padding-right:3px;text-align:right;"><input id="Manage_My_PopWnd_Fire" type="checkbox"></td>
+                                <td style="width:80px;padding-top:3px;">启用弹窗模式</td>
+                                <td>(只有启用弹窗模式,所设弹窗比例才会生效)<a style="color:blue;margin-left:10px;" target="_blank" href="./aq.html">我需要开启弹窗模式吗? </a></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan=2>
+                                    <table cellpadding="0" style="width:100%;">
+                                        <tr>
+                                            <td style="width:60px;height:25px;padding-top:3px;color:red;">弹窗比例：</td>
+                                            <td><input id="Manage_My_PopPos" maxlength="3" style="width:50px;border:solid 1px;border-color:#DDDDDD;padding-top:2px;height:20px;" type="text">%<span style="margin-left:5px;">(范围：1%—100%)</span><a id="A_PopWnd_Help" style="color:red;margin-left:5px;" target="_self" href="javascript:void(0)">开通“流量优化服务”,随意设置弹窗比例 </a></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=3>
+                        <table cellpadding="0" style="width:100%;">
+                            <tr>
+                                <td style="width:13%;height:30px;padding-right:3px;text-align:right;"><input id="Manage_My_Target_Fire" type="checkbox"></td>
+                                <td style="width:80px;padding-top:3px;">启用目标网址</td>
+                                <td>(只有启用目标网址,所设访问比例才会生效)<a style="color:blue;margin-left:10px;" target="_blank" href="./aq.html">怎样设置目标网址?</a></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan=2>
+                                    <table cellpadding="0" style="width:100%;">
+                                        <tr>
+                                            <td style="width:60px;height:25px;padding-top:3px;color:red;">目标网址：</td>
+                                            <td><input id="Manage_My_TargetUrl" maxlength="512" style="width:200px;border:solid 1px;border-color:#DDDDDD;padding-top:2px;height:20px;" type="text"><span style="margin-left:5px;">(网址必须以http(s)://开头)</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="height:25px;padding-top:3px;color:red;">访问比例：</td>
+                                            <td><input id="Manage_My_TUrlPos" maxlength=3 style="width:50px;border:solid 1px;border-color:#DDDDDD;padding-top:2px;height:20px;" type="text">%<span style="margin-left:5px;">(范围：1%——100%)</span><a id="A_Target_Help" style="color:red;margin-left:5px;" target="_self" href="javascript:void(0)">开通“流量优化服务”,随意设置访问比例 </a></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan=2>
+                                    <table cellpadding="0" width="100%">
+                                        <tr>
+                                            <td style="width:22px;height:25px;"><input id="Manage_My_SearchUrl" type="checkbox"></td>
+                                            <td style="padding-top:3px;"><span style="color:red;">访问子页目标网址</span><a style="color:blue;margin-left:5px;" target="_blank" href="./aq.html">我需要开启访问子页目标网址吗? </a></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=3>
+                        <table cellpadding="0" style="width:100%;">
+                            <tr>
+                                <td style="width:13%;height:30px;padding-right:3px;text-align:right;"><input id="Manage_My_FUrl_Fire" type="checkbox"></td>
+                                <td style="width:80px;padding-top:3px;">启用来源网址</td>
+                                <td> (只有启用来源网址,所添加的来源网址才会生效)<a style="color:blue;margin-left:10px;" target="_blank" href="./aq.html">怎样设置来源网址? </a></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan=2>
+                                    <table cellpadding="0" style="width:100%;">
+                                        <tr>
+                                            <td style="width:60px;height:25px;padding-top:3px;color:red;">可设来源：</td>
+                                            <td><span id="Span_SetFUrl_Number" style="color:green;margin-right:5px;">2</span>个<a id="A_FUrl_Help" style="color:red;margin-left:30px;" target="_self" href="javascript:void(0)">开通“流量优化服务”,可添加 20个来源网址  </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:60px;padding-top:3px;color:red;vertical-align:top;">来源列表：</td>
+                                            <td>
+                                                <table cellpadding="0" width="100%">
+                                                    <tr>
+                                                        <td rowspan=3 style="width:60%;height:30px;"><select id="Manage_My_FUrls" size=5 style="width:255px;"></select></td>
+                                                        <td style="width:40%;padding-left:5px;"><input id="Manage_Furl_Up" style="width:40px;" type="button" class="btnsubmit" value="上移"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="height:30px;padding-left:5px;"><input id="Manage_Furl_Down" style="width:40px;" type="button" class="btnsubmit" value="下移"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="height:30px;padding-left:5px;"><input id="Manage_Furl_Del" style="width:40px;" type="button" class="btnsubmit" value="删除"/></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:60px;padding-top:3px;color:red;">添加来源：</td>
+                                            <td>
+                                                <table cellpadding="0" width="100%">
+                                                    <tr>
+                                                        <td style="width:208px;height:25px;"><input id="Manage_My_AddFurl" style="width:100%;border:solid 1px;border-color:#DDDDDD;padding-top:2px;height:20px;" type="text"/></td>
+                                                        <td style="padding-left:10px;"><input id="Manage_AddFurl_Btn" style="width:80px;" type="button" class="btnsubmit" value="添加到列表"/></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=3 style="text-align:center;vertical-align:top;"><hr size=1 style="color:#DDDDDD;width:480px;" /></td>
+                </tr>
+                <tr>
+                    <td colspan=3>
+                        <table cellpadding="0" width="100%">
+                            <tr>
+                                <td style="width:30%;height:20px;text-align:right;font-weight:bolder;">总计分享流量：</td>
+                                <td id="Manage_My_ClickSelf" style="width:20%;color:red;"></td>
+                                <td style="width:20%;text-align:right;font-weight:bolder;">总计贡献流量：</td>
+                                <td id="Manage_My_ClickOther" style="width:30%;color:red;"></td>
+                            </tr>
+                            <tr>
+                                <td style="height:20px;text-align:right;font-weight:bolder;">最后活跃时间：</td>
+                                <td id="Manage_My_LastTime" style="color:red;"></td>
+                                <td style="text-align:right;font-weight:bolder;">添加网址时间：</td>
+                                <td id="Manage_My_AddTime" style="color:red;"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=3 style="text-align:center;vertical-align:top;"><hr size=1 style="color:#DDDDDD;width:480px;" /></td>
+                </tr>
+                <tr>
+                    <td colspan=3 style="text-align:center;height:25px;"><input style="width:150px;" id="Manage_My_Submit" type="submit" class="btnsubmit" value="修改完毕，立即更新"/></td>
+                </tr>
+            </table>
+            </form>
+        </td>
+        <td style="border-right:solid 1px;border-color:#DBD9D9;"></td>
+    </tr>
+    <tr style="display:none;">
+        <td style="border-left:solid 1px;border-color:#DBD9D9;"></td>
+        <td>
+            <table cellpadding="0" width="100%">
+                <tr>
+                    <td style="width:35%;height:60px;text-align:right;"><img src="images/smiley_blue.png" width="32" height="32" alt="" /></td>
+                    <td style="width:65%;padding-top:4px;font-size:20px;font-weight:bold;color:green;">恭喜您优化设置成功！</td>
+                </tr>
+            </table>
+        </td>
+        <td style="border-right:solid 1px;border-color:#DBD9D9;"></td>
+    </tr>
+    <tr>
+        <td style="width:13px;height:16px;background-image:url('images/corn_lb.gif');background-repeat:no-repeat;"></td>
+        <td style="width:100%;border-bottom:solid 1px;border-color:#DBD9D9;"></td>
+        <td style="width:13px;height:16px;background-image:url('images/corn_rb.gif');background-repeat:no-repeat;"></td>
+    </tr>
+</table>
