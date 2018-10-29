@@ -20,6 +20,8 @@
 <script type="text/javascript" charset="utf-8" src="./register/highcharts.js"></script>
 <script type="text/javascript" src="./register/image-picker.min.js"></script>
 <script type="text/javascript" src="./register/jquery.ThinkBox.js"></script>
+
+<script language="JavaScript" type="text/javascript" src="js/index.js"></script>
 <link rel="stylesheet" type="text/css" href="./register/ThinkBox.css" media="all">
 <!--<![endif]-->
 <link rel="stylesheet" type="text/css" href="./register/index-02.css">
@@ -59,10 +61,10 @@
 <div class="am-container">
 <div class="header-login-left"></div>
 <div class="am-topbar-right" style="margin-right: 43px;">
-<a href="/register.html"><span class="am-icon-pencil"></span> 注册</a>
+<a href="register.html"><span class="am-icon-pencil"></span> 注册</a>
 </div>
 <div class="am-topbar-right" style="margin-right: 50px;">
-<a href="/login.html"><span class="am-icon-user"></span> 登录</a>
+<a href="login.html"><span class="am-icon-user"></span> 登录</a>
 </div>
 </div>
 </div>
@@ -103,7 +105,7 @@
     }
 
     .icon {
-        background-image: url("/static/img/site_ico.png");
+        background-image: url("./images/site_ico.png");
         display: inline-block
     }
 
@@ -220,38 +222,62 @@
 <div class="am-form" id="UserProfile" data-am-validator="" novalidate="novalidate">
 <h6 class="login-formtext">欢迎加入</h6>
 <fieldset>
-<div class="am-form-group am-form-icon am-form-error">
+<div class="am-form-group am-form-icon">
 <i class="am-icon-user"></i>
-<input type="email" class="am-form-field am-field-error am-active" id="inputEmail" placeholder="请输入您常用的E-Mail地址" required="" pattern="^((([a-zA-Z]|\d|[!#\$%&amp;&#39;\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-zA-Z]|\d|[!#\$%&amp;&#39;\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-zA-Z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-zA-Z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-zA-Z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-zA-Z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-zA-Z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-zA-Z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$">
+<input type="email" class="am-form-field" id="inputEmail" placeholder="请输入您常用的E-Mail地址" required="" pattern="^((([a-zA-Z]|\d|[!#\$%&amp;'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-zA-Z]|\d|[!#\$%&amp;'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-zA-Z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-zA-Z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-zA-Z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-zA-Z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-zA-Z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-zA-Z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$">
 </div>
-<div class="am-form-group am-form-icon am-form-error">
+<div class="am-form-group am-form-icon">
 <i class="am-icon-user"></i>
-<input type="text" class="am-form-field am-field-error am-active" minlength="2" maxlength="10" id="inputUserName" placeholder="请输入您得用户名" required="">
+<input type="text" class="am-form-field" minlength="2" maxlength="10" id="inputUserName" placeholder="请输入您得用户名" required="">
 </div>
-<div class="am-form-group am-form-icon am-form-error">
+<div class="am-form-group am-form-icon">
 <i class="am-icon-unlock-alt"></i>
-<input type="password" class="am-form-field am-field-error am-active" id="inputPassword" minlength="6" maxlength="16" placeholder="请输入登录密码" required="">
+<input type="password" class="am-form-field" id="inputPassword" minlength="4" maxlength="16" placeholder="请输入登录密码" required="">
 </div>
-<div class="am-form-group am-form-icon am-form-error">
+<div class="am-form-group am-form-icon">
 <i class="am-icon-unlock-alt"></i>
-<input type="password" class="am-form-field am-field-error am-active" id="inputRePassword" data-equal-to="#inputPassword" placeholder="请再次输入登录密码" required="" pattern="^$">
+<input type="password" class="am-form-field" id="inputRePassword" data-equal-to="#inputPassword" placeholder="请再次输入登录密码" required="">
 </div>
 <div class="am-form-group am-form-icon" style="display:none">
 <i class="am-icon-unlock-alt"></i>
 <input type="text" class="am-form-field" id="inputInvite" placeholder="请输入邀请码" value="W6VS3IE" required="">
 </div>
-<div class="am-g am-form-group am-form-icon am-form-error">
+<div class="am-g am-form-group am-form-icon">
 <div class="am-u-sm-6">
 <i class="am-icon-link"></i>
-<input type="text" minlength="4" class="am-form-field am-field-error am-active" id="inputVerify" required="" placeholder="请输入右侧验证码" style="width: 120px;">
+<input type="text" minlength="4" class="am-form-field" id="inputVerify" required="" placeholder="请输入右侧验证码" style="width: 120px;">
 </div>
 <div class="am-u-sm-6 verify">
-<img src="./register/captcha.html" alt="captcha"> </div>
+<img id="Pas_ImgCode" alt="captcha" style="height: 40px;width: 100px;"> </div>
 </div>
 <div class="am-g am-form-group">
 <div class="am-u-sm-offset-2 am-u-sm-10">
 <div class="checkbox">
 <label>
+<input type="checkbox" checked=""> 阅读并同意 <a href="#" data-am-modal="{target: '#xieyi-confirm'}">用户协议</a>
+</label>
+</div>
+</div>
+</div>
+<div class="am-g am-form-group am-form-icon">
+<button type="button" class="am-btn am-btn-primary am-btn-block" id="submit" data-am-loading="{spinner: 'circle-o-notch', loadingText: '正在注册...', resetText: '注册'}">注册
+</button>
+</div>
+</fieldset>
+</div>
+</div>
+</div>
+<div class="am-modal am-modal-confirm" style="width: 880px;margin-left: -440px;border-radius: 10px" tabindex="-1" id="xieyi-confirm">
+<div class="am-modal-dialog">
+<div class="am-modal-hd">网站用户协议</div>
+<div class="am-modal-bd" style="text-align: left;max-height: 500px;overflow: auto;">
+<p><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">尊敬的用户，欢迎您注册成为本网站用户。在注册前请您仔细阅读如下服务条款：&nbsp;&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">本服务协议双方为本网站与本网站用户，本服务协议具有合同效力。&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">您确认本服务协议后，本服务协议即在您和本网站之间产生法律效力。请您务必在注册之前认真阅读全部服务协议内容，如有任何疑问，可向本网站咨询。&nbsp;&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">无论您事实上是否在注册之前认真阅读了本服务协议，只要您点击&quot;注册&quot;按钮并按照本网站注册程序成功注册为用户，您的行为仍然表示您同意并签署了本服务协议。&nbsp;&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">1．本网站服务条款的确认和接纳&nbsp; &nbsp;&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">本网站各项服务的所有权和运作权归本网站拥有。&nbsp; &nbsp;&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">2．用户必须：&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">(1)自行配备上网的所需设备， 包括个人电脑、调制解调器或其他必备上网装置。&nbsp;&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">(2)自行负担个人上网所支付的与此服务有关的电话费用、 网络费用。&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">3．用户在本网站上交易平台上不得发布下列违法信息：&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">(1)反对宪法所确定的基本原则的；&nbsp;&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">(2).危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；&nbsp;&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">(3).损害国家荣誉和利益的；&nbsp;&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">(4).煽动民族仇恨、民族歧视，破坏民族团结的；&nbsp;&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">(5).破坏国家宗教政策，宣扬邪教和封建迷信的；&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">(6).散布谣言，扰乱社会秩序，破坏社会稳定的；&nbsp;&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">(7).散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；&nbsp;&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">(8).侮辱或者诽谤他人，侵害他人合法权益的；&nbsp;&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">(9).含有法律、行政法规禁止的其他内容的。&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">4． 有关个人资料&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">用户同意：&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">(1) 提供及时、详尽及准确的个人资料。&nbsp;&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">(2).同意接收来自本网站的信息。&nbsp;&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">(3) 不断更新注册资料，符合及时、详尽准确的要求。所有原始键入的资料将引用为注册资料。&nbsp;&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">(4)本网站不公开用户的姓名、地址、电子邮箱和笔名，以下情况除外：&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">（a）用户授权本网站透露这些信息。&nbsp;&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">（b）相应的法律及程序要求本网站提供用户的个人资料。如果用户提供的资料包含有不正确的信息，本网站保留结束用户使用本网站信息服务资格的权利。&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">5. 用户在注册时应当选择稳定性及安全性相对较好的电子邮箱，并且同意接受并阅读本网站发往用户的各类电子邮件。如用户未及时从自己的电子邮箱接受电子邮件或因用户电子邮箱或用户电子邮件接收及阅读程序本身的问题使电子邮件无法正常接收或阅读的，只要本网站成功发送了电子邮件，应当视为用户已经接收到相关的电子邮件。电子邮件在发信服务器上所记录的发出时间视为送达时间。&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">6． 服务条款的修改&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">本网站有权在必要时修改服务条款，本网站服务条款一旦发生变动，将会在重要页面上提示修改内容。如果不同意所改动的内容，用户可以主动取消获得的本网站信息服务。如果用户继续享用本网站信息服务，则视为接受服务条款的变动。本网站保留随时修改或中断服务而不需通知用户的权利。本网站行使修改或中断服务的权利，不需对用户或第三方负责。&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">7． 用户隐私制度&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">尊重用户个人隐私是本网站的一项基本政策。所以，本网站一定不会在未经合法用户授权时公开、编辑或透露其注册资料及保存在本网站中的非公开内容，除非有法律许可要求或本网站在诚信的基础上认为透露这些信息在以下四种情况是必要的：&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">(1) 遵守有关法律规定，遵从本网站合法服务程序。&nbsp;&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">(2) 保持维护本网站的商标所有权。&nbsp;&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">(3) 在紧急情况下竭力维护用户个人和社会大众的隐私安全。&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">(4)符合其他相关的要求。&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">&nbsp;</span><br style="box-sizing: border-box; color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; white-space: normal;" /><span style="color: rgb(85, 85, 85); font-family: &#39;Microsoft Yahei&#39;, verdana, sans-serif; font-size: 14px; line-height: 25px; background-color: rgb(255, 255, 255);">本网站保留发布会员人口分析资询的权利。&nbsp;</span></p> </div>
+<div class="am-modal-footer">
+<span class="am-modal-btn" data-am-modal-cancel>不同意</span>
+<span class="am-modal-btn" data-am-modal-confirm>同意</span>
+</div>
+</div>
+</div>
 
 <script>
     $(function () {
@@ -260,6 +286,8 @@
                 location.href = '/';
             }
         });
+
+        $('.verify').trigger('click');
     })
     $(document).keypress(function (e) {
         if (e.which == 13) {
@@ -274,28 +302,35 @@
             return false;
         }
 
-        var data = {
+        var i = {
             email: $('#inputEmail').val(),
-            password: $('#inputPassword').val(),
+            pwd: $('#inputPassword').val(),
             repassword: $('#inputRePassword').val(),
             invite: $('#inputInvite').val(),
-            code: $('#inputVerify').val(),
-            username: $('#inputUserName').val()
+            cc: $('#inputVerify').val(),
+            name: $('#inputUserName').val()
         };
+        var data = {
+            f:2,
+            i:JSON.stringify(i)
+        }
+        //{"cc":"xqouga","name":"aaa","pwd":"aaa","email":"350015235@qq.com","question":"123456","answer":"123456"}
         $.ajax({
-            url: "/Home/Login/handle.html?action=register",
+            url: "/service/urlcore/webreg.php",
             type: 'post',
             data: data,
             dataType: 'json',
             success: function (data) {
-                if (data.code == 1) {
-                    $.ThinkBox.success(data.msg);
+                if (data.error > -1) {
+                    $.ThinkBox.success('恭喜您注册成功！');
                     setTimeout(function () {
-                        location.href = "/login.html";
+                        location.href = "login.html";
                     }, 2000); //加载成功后关闭loading信息
                 } else {
                     if (data.msg) {
                         $.ThinkBox.error(data.msg);
+                    } else {
+                        $.ThinkBox.error('注册失败，请检查注册信息是否有效');
                     }
                     refreshCaptcha();
                     $('#submit').button('reset');
@@ -312,8 +347,11 @@
     });
 
     function refreshCaptcha() {
-        $('.verify').children('img').attr('src', "/captcha.html?" + Math.random());
+        PasLoadImgCheck();
+        // $('.verify').children('img').attr('src', "/captcha.html?" + Math.random());
     }
+
+
 </script>
 
 <script>
@@ -349,7 +387,45 @@
             $('footer').addClass('am-topbar-fixed-bottom');
         }
     });
+</script>
+<footer class="footer">
+<div style="background: #2d3e50;  text-align: center;">
+<a href="http://www.miitbeian.gov.cn/">鲁ICP备16022331号-1</a>
+</div>
+</footer>
+<script>
+    $(function () {
+        var $form = $('#form-with-tooltip');
+        var $tooltip = $('<div id="vld-tooltip">提示信息！</div>');
+        $tooltip.appendTo(document.body);
 
+        $form.validator();
 
+        var validator = $form.data('amui.validator');
 
-<div class="am-dimmer" data-am-dimmer="" style="display: none;"></div><div id="vld-tooltip">提示信息！</div></body></html>
+        $form.on('focusin focusout', '.am-form-error input', function (e) {
+            if (e.type === 'focusin') {
+                var $this = $(this);
+                var offset = $this.offset();
+                var msg = $this.data('foolishMsg') || validator.getValidationMessage($this.data('validity'));
+
+                $tooltip.text(msg).show().css({
+                    left: offset.left + 10,
+                    top: offset.top + $(this).outerHeight() + 10
+                });
+            } else {
+                $tooltip.hide();
+            }
+        });
+
+        var screenHeight = document.body.scrollHeight;
+        var bodyHeight = document.body.clientHeight;
+
+        if (bodyHeight < screenHeight) {
+            $('body').css('height', bodyHeight);
+            $('footer').addClass('am-topbar-fixed-bottom');
+        }
+    });
+</script>
+</body>
+</html>

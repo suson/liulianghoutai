@@ -51,11 +51,14 @@ if (!empty($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == 'OPTIONS
 			$cc=strtoupper($i->cc);
 			$cc=md5($cc);
 			if($cc==md5($_SESSION['v'])){
+				empty($i->question) && $i->question = '123456';
+				empty($i->answer) && $i->answer = '123456';
 				$response=$reg->regNewUser($i->name,$i->pwd,$i->email,$i->question,$i->answer);
 				$response['i']=$_POST['i'];
 			}else{
 				$response["error"]=-1;
 				$response['i']=$_POST['i'];
+				$response['msg']='验证码错误';
 			}
 			break;
 		
