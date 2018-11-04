@@ -5,6 +5,7 @@
  */
 header('Access-Control-Allow-Origin:*');
 header('Access-Control-Allow-Origin:http://localhost:8080');
+header('Access-Control-Allow-Origin:http://127.0.0.1:8080');
 header('Access-Control-Allow-Credentials:true');
 header('Access-Control-Allow-Methods:POST,GET,OPTIONS,DELETE');
 header('Access-Control-Allow-Headers:Origin, Content-Type, X-Requested-With, Accept');  //响应头 请按照自己需求添加
@@ -123,7 +124,7 @@ if (!empty($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == 'OPTIONS
 		
 		case 20:
 			//加载URL信息
-			$response=$reg->loadUrlInfo();	
+			$response=$reg->loadUrlInfo($i);	
 			break;
 		
 		case 21:
@@ -171,7 +172,14 @@ if (!empty($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == 'OPTIONS
 			//获取用户的充值记录
 			$response=$reg->userRecord($i->page,$i->pagect);
 			break;
-	
+		case 35:
+			// 添加百度任务
+			$response=$reg->addUrlOnline($i->url,$i->name,$i->tid, $_SESSION['level']);
+			break;
+		case 36: 
+			// 获取百度任务列表
+			$response = $reg->getUrlList($i);
+			break;
 	}
 	if (empty($response)) {
 		$response=array("error"=>1);

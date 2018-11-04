@@ -13,6 +13,7 @@ require_once "./cfg/tdlogincfg.php";
 require_once "./cfg/rechangeTaxcfg.php";
 require_once "./cfg/svcipcfg.php";
 require_once("./alipay/myAlipaycfg.php");
+require_once("./MMysql.php");
 
 	class DB {
 		
@@ -34,6 +35,14 @@ require_once("./alipay/myAlipaycfg.php");
 				return ;
 			}
 			mysql_query('SET NAMES utf8');
+			$configArr = array(
+				'host'=> HOST,
+				'port'=> 3306,
+				'user' => USER,
+				'passwd' => PWD,
+				'dbname' => DBNAME,
+			);
+			$this->pdo = new MMysql($configArr);
 		}
 		public function loadUserInfo(){
 			$qUser="SELECT userid,name,ltime FROM users WHERE userid={$this->userid};";
@@ -100,7 +109,7 @@ require_once("./alipay/myAlipaycfg.php");
 				$row=@mysql_fetch_array($result,MYSQL_ASSOC);
 			}
 		}
-		public function loadUrlInfo(){
+		public function loadUrlInfo($i=''){
 			$this->updateDB();
 			/*
 			 * URL 信息
@@ -815,6 +824,58 @@ $flowcrl="0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|
 		}
 		public function __destruct(){
 			mysql_close($this->link);
+		}
+
+		/**
+		 * 获取任务列表
+		 * @param  [type] $data [description]
+		 * @return [type]       [description]
+		 */
+		public function getUrlList($data)
+		{
+			$condition = array(
+				'userid' => $this->userid
+			);
+			if (!empty($data->type) && $data->type == 'baidu') {
+				$condition['url'] = '"https://www.baidu.com"';
+			}
+			$order = array('urlid'=>'desc');
+			$tdonline=0;
+			try {
+				$this->updateDB();
+				$ret = $this->pdo->field('urlid,url,name,urltype,furls,turl,usefurl,useturl,usepop,rtime,ltime,free,clickother,clickself,tdclick,online')
+				->where($condition)
+				->order($order)
+				->select('url');
+				foreach ((array)$ret as $k => $v) {
+					if($v['online']==1) {
+						$tdonline++;
+					}
+					$condition = 'urlid='.$v['urlid'];
+					$ret[$k]['odrs'] = $this->pdo->field('odrid,urlid,status,sday,svcid,dayprice,btime,etime')
+					->where($condition)
+					->select('url_odrs');
+				}
+				$this->response['urls'] = $ret;
+				unset($ret);
+			} catch (Exception $e) {
+				$this->response['mysqlerror'] = $e->getMessage();
+			}
+			
+			$this->response['error']=0;
+			$this->response['tdonline']=$tdonline;
+			return $this->response;
+		}
+
+		/**
+		 * 保存任务
+		 * @param  [type] $id   [description]
+		 * @param  [type] $data [description]
+		 * @return [type]       [description]
+		 */
+		public function saveUrl($id,$data)
+		{
+
 		}
 		
 	}
