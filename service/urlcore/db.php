@@ -877,6 +877,60 @@ $flowcrl="0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|
 		{
 
 		}
+
+		/**
+		 * 开始停止分享
+		 * @param [type] $i [description]
+		 */
+		public function setFree($i)
+		{
+			$free = isset($i->free) ? $i->free : 0;
+			$ids = !empty($i->ids) ? $i->ids : array();
+			if (array_search($free,array(0,1)) === false) {
+				$this->response['error']=-1;
+				$this->response['msg'] = '无效状态';
+				return $this->response;
+			}
+			if (empty($ids)) {
+				$this->response['error']=-1;
+				$this->response['msg'] = '请选择任务';
+				return $this->response;
+			}
+			$condition = 'urlid in('.implode(',',$ids).')';
+			$ret = $this->pdo->where($condition)
+				->update('url',array('free' => $free));
+			// var_dump($ret,$this->pdo->getLastSql());
+			if ($ret > 0) {
+				$this->response['error'] = 0;
+			} else {
+				$this->response['error'] = -1;
+				$this->response['msg'] = '未发生变更';
+			}
+			
+			return $this->response;
+		}
+
+		/**
+		 * 删除
+		 * @param  [type] $i [description]
+		 * @return [type]    [description]
+		 */
+		public function delUrl($i)
+		{
+			$ids = !empty($i->ids) ? $i->ids : array();
+			if (empty($ids)) {
+				$this->response['error']=-1;
+				$this->response['msg'] = '请选择任务';
+				return $this->response;
+			}
+			$condition = 'urlid in('.implode(',',$ids).')';
+			$this->pdo->where($condition)
+				->delete('url');
+			$this->pdo->where($condition)
+				->delete('url_odrs');
+			$this->response['error'] = 0;
+			return $this->response;
+		}
 		
 	}
 ?>

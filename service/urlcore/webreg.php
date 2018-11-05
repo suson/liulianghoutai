@@ -180,6 +180,14 @@ if (!empty($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == 'OPTIONS
 			// 获取百度任务列表
 			$response = $reg->getUrlList($i);
 			break;
+		case 37:
+			// 批量更新分享状态
+			$response = $reg->setFree($i);
+			break;
+		case 38:
+			// 批量删除
+			$response = $reg->delUrl($i);
+			break;
 	}
 	if (empty($response)) {
 		$response=array("error"=>1);
