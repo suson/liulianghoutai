@@ -833,11 +833,12 @@ $flowcrl="0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|
 		 */
 		public function getUrlList($data)
 		{
+			global $url_config;
 			$condition = array(
 				'userid' => $this->userid
 			);
-			if (!empty($data->type) && $data->type == 'baidu') {
-				$condition['url'] = '"https://www.baidu.com"';
+			if (!empty($data->type)) {
+				$condition['url'] = '"'.$url_config[$data->type].'"';
 			}
 			$order = array('urlid'=>'desc');
 			$tdonline=0;
@@ -873,9 +874,51 @@ $flowcrl="0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|
 		 * @param  [type] $data [description]
 		 * @return [type]       [description]
 		 */
-		public function saveUrl($id,$data)
+		public function saveUrl($data,$level)
 		{
-
+			global $url_config;
+			$data = (array)$data;
+			//获取当前用户能添加的网址数量以及当前用户已添加网址数量
+			$lmt[]=LV1_URLLIMIT;
+			$lmt[]=LV2_URLLIMIT;
+			$lmt[]=LV3_URLLIMIT;
+			$lmt[]=LV4_URLLIMIT;
+			$lmt[]=LV5_URLLIMIT;
+			$qGetUrlCount="SELECT urlid,name FROM url WHERE userid=".$this->userid.";";
+			if (empty($this->userid)) {
+				$this->response['error'] = -1;
+				$this->response['msg'] = '用户不存在';
+				return $this->response;
+			}
+			$condition = 'userid='.$this->userid;
+			$ret = $this->pdo->field('count(1) as count')
+				->where($condition)
+				->limit(1)
+				->select('url');
+			$count = !empty($ret[0]['count']) ? $ret[0]['count'] : 0;
+			if($count > $lmt[$level]){
+				return array("error"=>-4,"msg"=>"当前等级添加网址已达上限！");
+			}
+			$save_data = array(
+				'name' => trim($data['name']),
+				'userid' => $this->userid,
+				'turl' => trim($data['url']).'|'.trim($data['keyword']),
+				'url' => !empty($url_config[$data['type']]) ? $url_config[$data['type']] : '',
+				'urltype' => SVC_IP8,
+				'ltime' => date('Y-m-d H:i:s'),
+			);
+			if (empty($data['urlid'])) {
+				$save_data['rtime'] = date('Y-m-d H:i:s');
+				$save_data['ip'] = getInvokeIP();
+				$ret = $this->pdo->insert('url',$save_data);
+			} else {
+				$condition = 'urlid ='.$data['urlid'].' and userid='.$this->userid;
+				$ret = $this->pdo->where($condition)
+					->update('url',$save_data);
+			}
+			$this->response['error'] = 0;
+			return $this->response;
+			var_dump($count,$data,$ret);
 		}
 
 		/**
@@ -929,6 +972,33 @@ $flowcrl="0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|
 			$this->pdo->where($condition)
 				->delete('url_odrs');
 			$this->response['error'] = 0;
+			return $this->response;
+		}
+
+		/**
+		 * 获取网址信息
+		 * @param  [type] $data [description]
+		 * @return [type]       [description]
+		 */
+		public function getUrlInfo($data)
+		{
+			$data = (array)$data;
+			$condition = 'urlid ='.$data['urlid'].' and userid='.$this->userid;
+			$ret = $this->pdo->field('name,urlid,turl')
+				->where($condition)
+				->limit(1)
+				->select('url');
+			if (empty($ret[0])) {
+				$this->response['error'] = -1;
+				$this->response['msg'] = '网址不存在';
+				return $this->response;
+			}
+			$data = $ret[0];
+			$turl = explode('|',$data['turl']);
+			$data['keyword'] =!empty($turl[1]) ? $turl[1] : '';
+			$data['url'] = !empty($turl[0]) ? $turl[0] : '';
+			$this->response['error'] = 0;
+			$this->response['data'] = $data;
 			return $this->response;
 		}
 		

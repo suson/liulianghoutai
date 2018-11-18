@@ -202,7 +202,7 @@
             dataType: 'json',
             success: function (data) {
                 if (data.error > -1) {
-                    location.href = "/dist/index.html";
+                    location.href = "/admin.html";
                 } else {
                     if(data.msg){
                         $.ThinkBox.error(data.msg);

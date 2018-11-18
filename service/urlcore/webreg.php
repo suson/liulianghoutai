@@ -173,8 +173,8 @@ if (!empty($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == 'OPTIONS
 			$response=$reg->userRecord($i->page,$i->pagect);
 			break;
 		case 35:
-			// 添加百度任务
-			$response=$reg->addUrlOnline($i->url,$i->name,$i->tid, $_SESSION['level']);
+			// 保存百度任务
+			$response=$reg->saveUrl($i,$_SESSION['level']);
 			break;
 		case 36: 
 			// 获取百度任务列表
@@ -187,6 +187,10 @@ if (!empty($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == 'OPTIONS
 		case 38:
 			// 批量删除
 			$response = $reg->delUrl($i);
+			break;
+		case 39:
+			// 获取url信息
+			$response = $reg->getUrlInfo($i);
 			break;
 	}
 	if (empty($response)) {

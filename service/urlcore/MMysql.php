@@ -220,7 +220,8 @@ class MMysql {
         $data = $this->_dataFormat($tbName,$data);
         if (!$data) return;
         $sql = "insert into ".$tbName."(".implode(',',array_keys($data)).") values(".implode(',',array_values($data)).")";
-        return $this->_doExec($sql);
+        $this->_doExec($sql);
+        return self::$_dbh->lastInsertId();
     }
  
     /**
