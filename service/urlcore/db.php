@@ -910,6 +910,13 @@ $flowcrl="0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|
 			if (empty($data['urlid'])) {
 				$save_data['rtime'] = date('Y-m-d H:i:s');
 				$save_data['ip'] = getInvokeIP();
+				$save_data['free'] = 1;
+				$save_data['furls'] = '';
+				$tcount=intval(SVC_IP8/24);
+				$flowcrl="0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100";
+				$save_data['flowcrl'] = $flowcrl;
+
+
 				$ret = $this->pdo->insert('url',$save_data);
 			} else {
 				$condition = 'urlid ='.$data['urlid'].' and userid='.$this->userid;

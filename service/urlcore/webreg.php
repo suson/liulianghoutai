@@ -4,27 +4,26 @@
  *主模块
  */
 header('Access-Control-Allow-Origin:*');
-header('Access-Control-Allow-Origin:http://localhost:8080');
-header('Access-Control-Allow-Origin:http://127.0.0.1:8080');
+header('Access-Control-Allow-Origin:http://localhost:9528');
+// header('Access-Control-Allow-Origin:http://127.0.0.1:8080');
 header('Access-Control-Allow-Credentials:true');
 header('Access-Control-Allow-Methods:POST,GET,OPTIONS,DELETE');
-header('Access-Control-Allow-Headers:Origin, Content-Type, X-Requested-With, Accept');  //响应头 请按照自己需求添加
+header('Access-Control-Allow-Headers:Origin, Content-Type, X-Requested-With, Accept, X-Token');  //响应头 请按照自己需求添加
 // var_dump($_SERVER);/
 if (!empty($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
-	exit;
+	header("HTTP/1.1 204 No Content");exit;
 }
 	session_start();
 	
 	require_once './db.php';
 	require_once './alipay/alipayto.php';
 	require_once "./alipay/myAlipaycfg.php";
-	
 	$f=$_POST['f'];
 	if(isset($_POST['i'])){
 		$x=stripcslashes($_POST['i']);
 		$i= json_decode($x);
 	}
-	
+	// var_dump($_SESSION);
 	if(isset($_SESSION['userid'])){
 		$reg=new DB($_SESSION['userid']);
 	}else if($f<7){
