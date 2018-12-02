@@ -840,13 +840,23 @@ $flowcrl="0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|
 			if (!empty($data->type)) {
 				$condition['url'] = '"'.$url_config[$data->type].'"';
 			}
+			$page_size = !empty($data->page_size) ? intval($data->page_size) : 10;
+			$page = !empty($data->page) ? intval($data->page) : 1;
+			$page < 1 && $page = 1;
 			$order = array('urlid'=>'desc');
 			$tdonline=0;
+			$total = 0;
 			try {
 				$this->updateDB();
+				$ret = $this->pdo->field('count(1) as total')
+				->where($condition)
+				->select('url');
+				!empty($ret[0]['total']) && $total=$ret[0]['total'];
+
 				$ret = $this->pdo->field('urlid,url,name,urltype,furls,turl,usefurl,useturl,usepop,rtime,ltime,free,clickother,clickself,tdclick,online')
 				->where($condition)
 				->order($order)
+				->limit($page,$page_size)
 				->select('url');
 				foreach ((array)$ret as $k => $v) {
 					if($v['online']==1) {
@@ -864,6 +874,7 @@ $flowcrl="0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|
 			}
 			
 			$this->response['error']=0;
+			$this->response['total']=$total;
 			$this->response['tdonline']=$tdonline;
 			return $this->response;
 		}
