@@ -9,5 +9,7 @@ define('LV5_URLLIMIT',150);
 $url_config = array(
 	'baidu' => 'https://www.baidu.com',
 	'baidu_speed' => 'https://www.baidu.com',
+	'sogou_ranking' => 'https://www.sogou.com',
+	'360_ranking' => 'https://www.so.com',
 );
 ?>

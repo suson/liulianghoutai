@@ -838,7 +838,8 @@ $flowcrl="0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|
 				'userid' => $this->userid
 			);
 			if (!empty($data->type)) {
-				$condition['url'] = '"'.$url_config[$data->type].'"';
+				$condition['url'] = '*';
+				isset($url_config[$data->type]) && $condition['url'] = '"'.$url_config[$data->type].'"';
 			}
 			$page_size = !empty($data->page_size) ? intval($data->page_size) : 10;
 			$page = !empty($data->page) ? intval($data->page) : 1;
