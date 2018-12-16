@@ -191,6 +191,10 @@ if (!empty($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == 'OPTIONS
 			// 获取url信息
 			$response = $reg->getUrlInfo($i);
 			break;
+		case 40:
+			// 积分兑换余额
+			$response = $reg->turnMoney($i);
+			break;
 	}
 	if (empty($response)) {
 		$response=array("error"=>1);

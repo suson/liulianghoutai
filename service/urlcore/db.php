@@ -1020,6 +1020,62 @@ $flowcrl="0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|0:$tcount:100|
 			$this->response['data'] = $data;
 			return $this->response;
 		}
+
+		/**
+		 * 积分兑换余额
+		 * @param  [type] $data [description]
+		 * @return [type]       [description]
+		 */
+		public function turnMoney($data)
+		{
+			$data = (array)$data;
+			$turn_score = !empty($data['score']) ? intval($data['score']) : 0;
+			if (empty($turn_score)) {
+				$this->response['error'] = -1;
+				$this->response['msg'] = '请输入兑换积分';
+				return $this->response;
+			}
+			$condition = 'userid='.$this->userid;
+			$ret = $this->pdo->field('score,money')
+				->where($condition)
+				->limit(1)
+				->select('account');
+			if (empty($ret[0])) {
+				$this->response['error'] = -1;
+				$this->response['msg'] = '用户不存在';
+				return $this->response;
+			}
+			$info = $ret[0];
+			if ($turn_score > $info['score']) {
+				$this->response['error'] = -1;
+				$this->response['msg'] = '积分余额不足';
+				return $this->response;
+			}
+
+			$size = floor($turn_score/5000);
+			$total_score = $size * 5000;
+			$total_money = $size * 1.1 * 100; //单位分
+
+
+			$ret = $this->pdo->where($condition)
+				->update('account',array('score' => '(score-'.$total_score.')','money' => '(money+'.$total_money.')'));
+			if (empty($ret)) {
+				$this->response['error'] = -1;
+				$this->response['msg'] = '兑换失败';
+				return $this->response;
+			}
+
+			$ret = $this->pdo->field('score,money')
+				->where($condition)
+				->limit(1)
+				->select('account');
+			$data = !empty($ret[0]) ? $ret[0] : array();
+
+
+			$this->response['error'] = 0;
+			$this->response['data'] = $data;
+			return $this->response;
+		}
 		
 	}
 ?>
